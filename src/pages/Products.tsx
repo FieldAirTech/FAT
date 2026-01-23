@@ -43,8 +43,8 @@ export default function Products() {
               name="XAG P150 Max"
               category="Drone de Pulverização"
               image={p150MaxImg}
-              description="Capacidade 40L, 16ha/h, tecnologia VTOL"
-              specs={['40L Tanque', '16 ha/h', 'VTOL']}
+              description="Capacidade 80L, 16ha/h, tecnologia VTOL"
+              specs={['80L Tanque', '16 ha/h', '71KM/H']}
             />
             
             <ProductCard
@@ -53,7 +53,7 @@ export default function Products() {
               category="Drone de Pulverização"
               image={p100ProImg}
               description="Precisão centimétrica, radar 3D"
-              specs={['25L Tanque', '10 ha/h', 'Radar 3D']}
+              specs={['60L Tanque', '10 ha/h', 'Radar 3D']}
             />
           </div>
         </div>
@@ -76,25 +76,25 @@ export default function Products() {
               category="Rover Agrícola"
               image={s1000Img}
               description="Rover autónomo todo-terreno"
-              specs={['150L Tanque', '8 ha/h', '4WD']}
+              specs={['1000L Tanque', 'Construção Robusta', '4WD']}
             />
             
             <ProductCard
               id="s500-pro"
               name="LJ Tech S500 Pro"
-              category="Rover Compacto"
+              category="Rover Agrícola"
               image={s500ProImg}
               description="Compacto e eficiente"
-              specs={['80L Tanque', '5 ha/h', 'GPS RTK']}
+              specs={['500L Tanque', 'Operação Precisa', 'GPS RTK']}
             />
             
             <ProductCard
               id="s450"
               name="LJ Tech S450"
-              category="Drone de Mapeamento"
+              category="Rover Agrícola"
               image={s450Img}
               description="Mapeamento de alta precisão"
-              specs={['42MP Câmera', '200 ha/dia', 'Orthomosaic']}
+              specs={['240L Tanque', '16L/Min', '60-200μm']}
             />
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function Products() {
               category="GPS para Trator"
               image={xagAPC2Img}
               description="Piloto automático de alta precisão"
-              specs={['2.5cm Precisão', 'Compatível XAG', 'Fácil instalação']}
+              specs={['2.5cm Precisão', 'U-Turn Automática', 'Fácil instalação']}
             />
             
             <ProductCard
@@ -126,7 +126,7 @@ export default function Products() {
               category="GPS Profissional"
               image={nstGPSImg}
               description="Sistema GPS multi-marca"
-              specs={['Correção RTK', 'Multi-marca', 'Display 10.1"']}
+              specs={['Correção RTK', 'ISOBUS', 'Display 10.1"']}
             />
           </div>
         </div>
