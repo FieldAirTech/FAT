@@ -436,23 +436,19 @@ export default function TopXGun() {
                 </p>
               </div>
               
-              <div className="flex flex-wrap gap-4">
-                <button 
-                  onClick={() => setIsVideoOpen(true)}
-                  className="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-xl font-medium transition-all duration-300 hover:scale-105 shadow-lg"
-                >
-                  <Headphones size={18} />
-                  {p.requestDemo}
-                </button>
-                <Link 
-                  to="/ficha-tecnica/FP700"
-                  className="flex items-center gap-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3.5 rounded-xl font-medium transition-all duration-300"
-                >
-                  <BookOpen size={18} />
-                  {p.completeTechSheet}
-                  <Download size={18} />
-                </Link>
-              </div>
+<div className="flex flex-wrap gap-4">
+  {/* Botão Request Demo removido */}
+
+  <Link 
+    to="/ficha-tecnica/FP700"
+    className="flex items-center gap-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3.5 rounded-xl font-medium transition-all duration-300"
+  >
+    <BookOpen size={18} />
+    {p.completeTechSheet}
+    <Download size={18} />
+  </Link>
+</div>
+
             </div>
 
             <div ref={heroRef} className="flex justify-center">
