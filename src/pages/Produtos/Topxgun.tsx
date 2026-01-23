@@ -489,24 +489,25 @@ export default function TopXGun() {
         </div>
       </section>
 
-      {/* 1.5. Video Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-          </div>
-          
-          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
-            <div className="absolute inset-0 overflow-hidden rounded-xl">
-              <iframe 
-                src="https://www.youtube-nocookie.com/embed/uewIvL5rFK0?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=uewIvL5rFK0&mute=1&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&start=3&playsinline=1"
-                className="w-full h-full"
-                title="S500 PRO Autonomous Sprayer"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen={false}
-                loading="lazy"
-                frameBorder="0"
-              />
-            </div>
+{/* 2. Video Section */}
+<section className="py-20 bg-gray-900">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-12">
+      {/* Adicione título ou descrição aqui se necessário */}
+    </div>
+    
+    <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
+      <div className="absolute inset-0 overflow-hidden rounded-xl">
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/uewIvL5rFK0?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=uewIvL5rFK0&volume=35&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&start=3&playsinline=1"
+          className="w-full h-full"
+          title="Video demonstration"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
+      </div>
             
             {/* Overlay suave para esconder elementos */}
             <div className="absolute inset-0 pointer-events-none">
