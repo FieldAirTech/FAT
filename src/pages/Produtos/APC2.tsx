@@ -382,7 +382,7 @@ export default function APC2Page() {
           <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
             <div className="absolute inset-0 overflow-hidden rounded-xl">
               <iframe 
-                src="https://www.youtube-nocookie.com/embed/2r66K-aK_BE?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=2r66K-aK_BE&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&start=0&volume=35&mute=0"
+                src="https://www.youtube-nocookie.com/embed/YRgqrb98Ksg?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=2r66K-aK_BE&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&start=0&volume=35&mute=0"
                 className="w-full h-full"
                 title="S500 PRO Autonomous Sprayer"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
