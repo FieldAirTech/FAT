@@ -63,7 +63,7 @@ const rovers = [
   {
     id: 's500-pro',
     name: 'LJ Tech S500 Pro',
-    image: 'https://i.imgur.com/9jPc15n.png',
+    image: 'https://imgur.com/QZyuxij',
     description: 'Compacto • Preciso • Eficiente',
     specs: ['80L Tanque', '5 ha/h', 'GPS RTK'],
     category: 'Rover Agrícola',
