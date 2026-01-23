@@ -1,6 +1,7 @@
 // src/pages/Products.tsx
 import { useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
+import Link from 'next/link';
 
 // Imagens
 import p150MaxImg from '../assets/p150max.jpg';
