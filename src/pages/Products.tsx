@@ -1,7 +1,6 @@
 // src/pages/Products.tsx
 import { useEffect } from 'react';
 import ProductCard from '../components/ProductCard';
-import Link from 'next/link';
 
 // Imagens
 import p150MaxImg from '../assets/p150max.jpg';
@@ -132,19 +131,20 @@ export default function Products() {
           </div>
         </div>
 
-{/* Contacto */}
-<div className="text-center mt-20">
-  <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 max-w-2xl mx-auto">
-    <h3 className="text-lg font-bold text-gray-900 mb-3">
-      Interessado em algum produto?
-    </h3>
-    <Link href="/contactos" passHref>
-      <a className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
-        Pedir Orçamento
-      </a>
-    </Link>
-  </div>
-</div>
+        {/* Contacto */}
+        <div className="text-center mt-20">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 max-w-2xl mx-auto">
+            <h3 className="text-lg font-bold text-gray-900 mb-3">
+              Interessado em algum produto?
+            </h3>
+            <a
+              href="/contactos"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors"
+            >
+              Pedir Orçamento
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
