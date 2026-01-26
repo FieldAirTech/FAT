@@ -1,21 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TÍTULO E DESCRIÇÃO PRINCIPAIS -->
+    <title>Field Air Tech | Drones Agrícolas, GPS para Trator e Veículos Autónomos em Portugal</title>
+    <meta name="description" content="Field Air Tech: Especialistas em tecnologia agrícola com drones de precisão, GPS para trator e veículos autónomos. Soluções inovadoras para agricultura moderna portuguesa.">
+    
+    <!-- PALAVRAS-CHAVE -->
+    <meta name="keywords" content="drones agrícolas, GPS para trator, veículos autónomos, agricultura de precisão Portugal, field air tech, tecnologia agrícola, drones Portugal, automação agrícola">
+    
+    <!-- AUTOR E COPYRIGHT -->
+    <meta name="author" content="Field Air Tech">
+    <meta name="copyright" content="Field Air Tech">
+    
+    <!-- CANÓNICO -->
+    <link rel="canonical" href="https://www.fieldairtech.com">
+    
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Field Air Tech | Tecnologia Agrícola de Precisão">
+    <meta property="og:description" content="Especialistas em drones agrícolas, GPS para trator e veículos autónomos para agricultura moderna">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.fieldairtech.com">
+    <meta property="og:image" content="https://www.fieldairtech.com/images/og-fieldairtech.jpg">
+    <meta property="og:site_name" content="Field Air Tech">
+    <meta property="og:locale" content="pt_PT">
+    
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Field Air Tech | Tecnologia Agrícola">
+    <meta name="twitter:description" content="Drones, GPS e veículos autónomos para agricultura de precisão">
+    <meta name="twitter:image" content="https://www.fieldairtech.com/images/twitter-fieldairtech.jpg">
+    
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- SCHEMA MARKUP (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Field Air Tech",
+        "url": "https://www.fieldairtech.com",
+        "logo": "https://www.fieldairtech.com/logo.png",
+        "description": "Líder em tecnologia agrícola com drones, GPS e veículos autónomos em Portugal",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "PT"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "geral@fieldairtech.com",
+            "contactType": "atendimento ao cliente",
+            "availableLanguage": "Português"
+        },
+        "sameAs": [
+            "https://facebook.com/fieldairtech",
+            "https://linkedin.com/company/fieldairtech",
+            "https://instagram.com/fieldairtech"
+        ]
+    }
+    </script>
+    
+    <!-- PRÉ-CONEXÕES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+</head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Field Air Tech</title>
-
-    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
-  </head>
-
-  <body>
+<body>
+    <!-- CONTEÚDO DA SUA APLICAÇÃO -->
     <div id="root"></div>
+    
+    <!-- SCRIPTS -->
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+    
+    <!-- GOOGLE ANALYTICS (REMOVA SE NÃO USAR) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
 </html>
