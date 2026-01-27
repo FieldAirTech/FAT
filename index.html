@@ -76,129 +76,139 @@
             box-sizing: border-box;
         }
         
-        /* Esconder conteúdo da aplicação quando JS está desativado */
-        .no-js #root {
-            display: none !important;
+        html {
+            scroll-behavior: smooth;
         }
         
-        /* Mostrar conteúdo do noscript quando JS está desativado */
-        .no-js noscript {
-            display: block !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-        
-        /* Esconder noscript quando JS está ativo (padrão do navegador) */
-        noscript {
-            display: none;
-        }
-        
-        /* ESTILOS PARA CONTEÚDO NOSCRIPT */
-        .noscript-content {
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
-            min-height: 100vh;
+            background: #f9f9f9;
+        }
+        
+        /* CONTEÚDO ESTÁTICO (visível SEM JavaScript) */
+        .static-content {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
         }
         
-        .noscript-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        /* Quando JavaScript está ativo, esconde conteúdo estático */
+        .js-enabled .static-content {
+            display: none;
         }
         
-        .noscript-header {
+        /* Quando JavaScript NÃO está ativo, mostra conteúdo estático */
+        .no-js .static-content {
+            display: block !important;
+        }
+        
+        /* Para a aplicação React - começa escondida */
+        #root {
+            min-height: 100vh;
+        }
+        
+        /* Quando JS ativo, mostra a aplicação */
+        .js-enabled #root {
+            display: block;
+        }
+        
+        /* Quando JS desativado, esconde o root vazio */
+        .no-js #root {
+            display: none;
+        }
+        
+        /* Esconder noscript quando JS ativo */
+        .js-enabled noscript {
+            display: none;
+        }
+        
+        /* ESTILOS DO CONTEÚDO ESTÁTICO */
+        .header {
             text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #2c5e1a 0%, #4CAF50 100%);
+            color: white;
+            border-radius: 0 0 20px 20px;
             margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #4CAF50;
         }
         
-        .noscript-title {
-            color: #2c5e1a;
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .noscript-subtitle {
-            color: #666;
-            font-size: 1.2rem;
-            font-weight: normal;
-        }
-        
-        .noscript-section {
-            margin-bottom: 35px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 5px solid #4CAF50;
-        }
-        
-        .noscript-section h2 {
-            color: #2c5e1a;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .noscript-section p {
-            font-size: 1.1rem;
+        .header h1 {
+            font-size: 3rem;
             margin-bottom: 10px;
         }
         
-        .noscript-highlight {
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #2c5e1a;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+        }
+        
+        .highlight-box {
             background: #e8f5e9;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-        
-        .noscript-alert {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 25px;
-            margin-top: 40px;
-            text-align: center;
-        }
-        
-        .noscript-alert h3 {
-            color: #856404;
-            margin-bottom: 15px;
-        }
-        
-        .noscript-button {
-            display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin: 10px;
-            transition: background 0.3s;
-        }
-        
-        .noscript-button:hover {
-            background: #45a049;
-        }
-        
-        .contact-info {
-            background: #e3f2fd;
             padding: 20px;
             border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             margin-top: 20px;
         }
         
-        /* ESTILOS PARA LOADING DA APLICAÇÃO */
-        #root {
-            position: relative;
+        .product-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
         }
         
+        .product-card h3 {
+            color: #2c5e1a;
+            margin-bottom: 10px;
+        }
+        
+        .contact-bar {
+            background: #2c5e1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        .contact-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            border-radius: 5px;
+        }
+        
+        /* Loading para aplicação */
         .app-loading {
             position: fixed;
             top: 0;
@@ -210,11 +220,6 @@
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .loading-content {
-            text-align: center;
         }
         
         .loading-spinner {
@@ -224,144 +229,155 @@
             width: 50px;
             height: 50px;
             animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
         }
         
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
     
-    <!-- Script para remover a classe no-js quando JavaScript está ativo -->
+    <!-- Script para alternar entre conteúdo estático e aplicação -->
     <script>
-        // Remove a classe 'no-js' se JavaScript estiver ativo
-        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        // Remove a classe 'no-js' e adiciona 'js-enabled'
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js-enabled');
         
         // Adiciona loading screen
-        document.addEventListener('DOMContentLoaded', function() {
-            var root = document.getElementById('root');
-            if (root) {
-                var loadingDiv = document.createElement('div');
-                loadingDiv.className = 'app-loading';
-                loadingDiv.innerHTML = `
-                    <div class="loading-content">
-                        <div class="loading-spinner"></div>
-                        <h2 style="color: #2c5e1a;">FieldAirTech</h2>
-                        <p>A carregar a aplicação...</p>
-                    </div>
-                `;
-                document.body.appendChild(loadingDiv);
-                
-                // Remove loading quando a aplicação carregar
-                window.addEventListener('load', function() {
+        window.addEventListener('DOMContentLoaded', function() {
+            var loadingDiv = document.createElement('div');
+            loadingDiv.className = 'app-loading';
+            loadingDiv.innerHTML = '<div class="loading-spinner"></div>';
+            document.body.appendChild(loadingDiv);
+            
+            // Remove loading quando a app carregar
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    loadingDiv.style.opacity = '0';
+                    loadingDiv.style.transition = 'opacity 0.5s';
                     setTimeout(function() {
-                        loadingDiv.style.opacity = '0';
-                        loadingDiv.style.transition = 'opacity 0.5s';
-                        setTimeout(function() {
-                            loadingDiv.remove();
-                        }, 500);
-                    }, 1000);
-                });
-            }
+                        loadingDiv.remove();
+                    }, 500);
+                }, 1000);
+            });
         });
     </script>
     
 </head>
 
 <body>
-    <!-- LOADING SCREEN (será removida pelo JavaScript) -->
+    <!-- CONTEÚDO ESTÁTICO PARA SEO (NotebookLM vai ver isto!) -->
+    <div class="static-content">
+        <header class="header">
+            <h1>FieldAirTech LDA</h1>
+            <p>Tecnologia Agrícola de Precisão - Soluções Inovadoras para Agricultura Moderna</p>
+        </header>
+        
+        <main class="static-content">
+            <section class="section">
+                <h2>Sobre Nós</h2>
+                <p>A FieldAirTech LDA é uma empresa portuguesa especializada em tecnologia agrícola de precisão, oferecendo soluções avançadas com drones, GPS para tratores e veículos autónomos.</p>
+                <div class="highlight-box">
+                    <p><strong>Fundada em 2020</strong>, com sede em Coruche e atuação em todo o país, já contamos com mais de <strong>500 clientes satisfeitos</strong>.</p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>O Que Fazemos</h2>
+                <p>Desenvolvemos operações agrícolas com drones, incluindo:</p>
+                <ul style="margin: 15px 0 15px 30px;">
+                    <li>Tratamentos fitossanitários</li>
+                    <li>Fertilizações de precisão</li>
+                    <li>Sementeiras automatizadas</li>
+                </ul>
+                <p>Oferecemos consultoria técnica e científica, com mapeamento digital de terrenos, levantamentos térmicos e hídricos, e aconselhamento técnico em campo.</p>
+            </section>
+            
+            <section class="section">
+                <h2>Nossos Produtos</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h3>Drones Agrícolas</h3>
+                        <p>XAG P150 Max</p>
+                        <p>TOPXGUN</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>Veículos Autónomos</h3>
+                        <p>XAG R200</p>
+                        <p>LJ TECH S500 Pro</p>
+                        <p>LJ TECH S1000</p>
+                    </div>
+                    <div class="product-card">
+                        <h3>GPS para Tratores</h3>
+                        <p>XAG APC2</p>
+                        <p>NST N500</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Serviços Completos</h2>
+                <ul style="margin: 15px 0 15px 30px;">
+                    <li>Vendas e consultoria personalizada</li>
+                    <li>Manutenção com garantia 12 meses</li>
+                    <li>Formação e certificação</li>
+                    <li>Instalação em 48 horas</li>
+                    <li>Suporte técnico 24/7</li>
+                </ul>
+                <div class="highlight-box">
+                    <p><strong>Aumente a eficiência em até 35%</strong> com os nossos planos personalizados de otimização agrícola.</p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Missão, Visão e Valores</h2>
+                <p><strong>Missão:</strong> Democratizar o acesso à tecnologia agrícola de ponta, aumentando a produtividade em 40% e promovendo sustentabilidade.</p>
+                <p><strong>Visão:</strong> Ser referência nacional em tecnologia agrícola de precisão.</p>
+                <p><strong>Valores:</strong> Inovação, Fiabilidade, Sustentabilidade.</p>
+            </section>
+            
+            <div class="contact-bar">
+                <p style="margin-bottom: 15px; font-size: 1.2rem;"><strong>Pronto para modernizar sua agricultura?</strong></p>
+                <a href="mailto:geral@fieldairtech.com">📧 Contactar</a>
+                <a href="tel:+351123456789">📞 Ligar Agora</a>
+            </div>
+        </main>
+        
+        <footer style="text-align: center; padding: 30px; color: #666; margin-top: 40px;">
+            <p>© 2024 FieldAirTech LDA. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                <a href="/politica-privacidade" style="color: #4CAF50;">Política de Privacidade</a> | 
+                <a href="/termos" style="color: #4CAF50;">Termos de Serviço</a>
+            </p>
+        </footer>
+    </div>
     
     <!-- CONTEÚDO DA SUA APLICAÇÃO REACT/VUE -->
     <div id="root">
         <!-- 
-            Esta div será preenchida pela sua aplicação JavaScript
-            Quando JavaScript está ativo, o conteúdo acima é removido
-            e esta div é preenchida pela sua aplicação
+            ESTA DIV FICA VAZIA NO CÓDIGO-FONTE
+            Mas agora o NotebookLM vai ver o conteúdo estático acima!
         -->
     </div>
-    
-    <!-- CONTEÚDO PARA USUÁRIOS SEM JAVASCRIPT -->
-    <noscript>
-        <div class="noscript-content">
-            <div class="noscript-container">
-                <header class="noscript-header">
-                    <h1 class="noscript-title">FieldAirTech LDA</h1>
-                    <p class="noscript-subtitle">Tecnologia Agrícola de Precisão</p>
-                </header>
-                
-                <div class="noscript-section">
-                    <p>
-                        A FieldAirTech LDA é uma empresa portuguesa especializada em tecnologia agrícola de precisão, oferecendo soluções avançadas com drones, GPS para tratores e veículos autónomos. Fundada em 2020, a empresa tem sede em Coruche e atua em todo o país, contando com mais de 500 clientes satisfeitos.
-                    </p>
-                </div>
-
-                <div class="noscript-section">
-                    <h2>O que fazemos</h2>
-                    <p>
-                        A empresa desenvolve operações agrícolas com drones, incluindo tratamentos fitossanitários, fertilizações e sementeiras com maior precisão e sustentabilidade ambiental.
-                    </p>
-                    <div class="noscript-highlight">
-                        <p><strong>Consultoria Técnica e Científica:</strong> Mapeamento digital de terrenos, levantamentos térmicos e hídricos, e aconselhamento técnico em campo.</p>
-                        <p><strong>Gestão Agrícola:</strong> Análises de viabilidade, planos personalizados, monitorização de dados e otimização de recursos e insumos.</p>
-                    </div>
-                </div>
-
-                <div class="noscript-section">
-                    <h2>Produtos e Equipamentos</h2>
-                    <p><strong>Drones Agrícolas:</strong> XAG P150 Max, TOPXGUN, Standard 60L.</p>
-                    <p><strong>Veículos Autónomos:</strong> XAG R200, LJ TECH S500 Pro, LJ TECH S1000.</p>
-                    <p><strong>GPS para Tratores:</strong> XAG APC2, NST N500.</p>
-                </div>
-
-                <div class="noscript-section">
-                    <h2>Serviços Completos</h2>
-                    <ul style="margin-left: 20px; margin-top: 10px;">
-                        <li>Vendas e consultoria personalizada</li>
-                        <li>Manutenção e reparação com garantia até 12 meses</li>
-                        <li>Formação e certificação de operadores</li>
-                        <li>Configuração e instalação em 48 horas</li>
-                        <li>Suporte técnico e consultoria agrícola</li>
-                    </ul>
-                    <p style="margin-top: 15px; font-weight: bold; color: #2c5e1a;">
-                        Aumento de eficiência em até 35% com os nossos planos personalizados.
-                    </p>
-                </div>
-
-                <div class="noscript-section">
-                    <h2>Missão, Visão e Valores</h2>
-                    <p><strong>Missão:</strong> Democratizar o acesso à tecnologia agrícola de ponta, aumentando a produtividade em até 40%, reduzindo custos e promovendo práticas sustentáveis.</p>
-                    <p><strong>Visão:</strong> Ser referência nacional em tecnologia agrícola de precisão, estabelecendo novos padrões de eficiência e sustentabilidade.</p>
-                    <p><strong>Valores:</strong> Inovação, Fiabilidade e Sustentabilidade.</p>
-                </div>
-                
-                <div class="noscript-alert">
-                    <h3>⚠️ JavaScript Necessário</h3>
-                    <p>Para experienciar a versão completa e interativa do nosso site, é necessário ter o JavaScript ativado no seu navegador.</p>
-                    <p>
-                        <a href="https://www.enable-javascript.com/pt/" class="noscript-button" target="_blank">
-                            🔧 Como Ativar JavaScript
-                        </a>
-                        <a href="mailto:geral@fieldairtech.com" class="noscript-button" style="background: #2196F3;">
-                            📧 Contactar-nos
-                        </a>
-                    </p>
-                    
-                    <div class="contact-info">
-                        <h4>📞 Contactos Alternativos</h4>
-                        <p><strong>Email:</strong> geral@fieldairtech.com</p>
-                        <p><strong>Telefone:</strong> +351 123 456 789</p>
-                        <p><strong>Localização:</strong> Coruche, Portugal</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </noscript>
     
     <!-- SCRIPTS DA SUA APLICAÇÃO -->
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- GOOGLE ANALYTICS (ATUALIZE COM SEU ID) -->
+    <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
