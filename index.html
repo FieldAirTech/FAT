@@ -32,7 +32,6 @@
     <meta property="og:site_name" content="Field Air Tech">
     <meta property="og:locale" content="pt_PT">
     
-    
     <!-- FAVICON -->
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon-48.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -68,48 +67,148 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- ESTILO PARA QUANDO JAVASCRIPT ESTÁ DESATIVADO -->
+    <style>
+        /* Estilo básico que aparece quando JS está desativado */
+        noscript {
+            display: block;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        
+        .noscript-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        noscript h1 {
+            color: #2c5e1a;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #4CAF50;
+        }
+        
+        noscript h2 {
+            color: #3e7c2a;
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #81C784;
+        }
+        
+        noscript p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        
+        noscript strong {
+            color: #2c5e1a;
+        }
+        
+        .noscript-alert {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            border-radius: 4px;
+        }
+        
+        .noscript-alert a {
+            color: #2c5e1a;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        .noscript-alert a:hover {
+            color: #1b5e20;
+        }
+        
+        /* Estilo para quando JS está ativo - esconde o noscript */
+        .js-enabled noscript {
+            display: none;
+        }
+        
+        /* Estilo para a div root quando JS está desativado */
+        body:not(.js-enabled) #root {
+            display: none;
+        }
+    </style>
+    
+    <!-- Script para adicionar classe quando JS está ativo -->
+    <script>
+        // Adiciona classe ao elemento html quando JavaScript está ativo
+        document.documentElement.className = 'js-enabled';
+    </script>
+    
 </head>
 
 <body>
-    <!-- CONTEÚDO DA SUA APLICAÇÃO -->
-    <div id="root"></div>
+    <!-- CONTEÚDO DA SUA APLICAÇÃO REACT/VUE -->
+    <div id="root">
+        <!-- 
+            Esta div será preenchida pela sua aplicação JavaScript (React/Vue/Angular)
+            Quando JavaScript está ativado, este conteúdo será renderizado
+            Quando JavaScript está desativado, esta div fica vazia e escondida
+        -->
+    </div>
     
-    <!-- CONTEÚDO PARA USUÁRIOS SEM JAVASCRIPT HABILITADO -->
+    <!-- CONTEÚDO ALTERNATIVO PARA SEM JAVASCRIPT -->
     <noscript>
-        <h1>FieldAirTech LDA – Tecnologia Agrícola de Precisão</h1>
-        <p>
-            A FieldAirTech LDA é uma empresa portuguesa especializada em tecnologia agrícola de precisão, oferecendo soluções avançadas com drones, GPS para tratores e veículos autónomos. Fundada em 2020, a empresa tem sede em Coruche e atua em todo o país, contando com mais de 200 clientes satisfeitos.
-        </p>
+        <div class="noscript-container">
+            <h1>FieldAirTech LDA – Tecnologia Agrícola de Precisão</h1>
+            <p>
+                A FieldAirTech LDA é uma empresa portuguesa especializada em tecnologia agrícola de precisão, oferecendo soluções avançadas com drones, GPS para tratores e veículos autónomos. Fundada em 2020, a empresa tem sede em Coruche e atua em todo o país, contando com mais de 500 clientes satisfeitos.
+            </p>
 
-        <h2>O que fazemos</h2>
-        <p>
-            A empresa desenvolve operações agrícolas com drones, incluindo tratamentos fitossanitários, fertilizações e sementeiras com maior precisão e sustentabilidade ambiental. Além disso, oferece consultoria técnica e científica, como mapeamento digital de terrenos, levantamentos térmicos e hídricos, e aconselhamento técnico em campo. Também presta consultoria de gestão agrícola, realizando análises de viabilidade, planos personalizados, monitorização de dados e otimização de recursos e insumos.
-        </p>
+            <h2>O que fazemos</h2>
+            <p>
+                A empresa desenvolve operações agrícolas com drones, incluindo tratamentos fitossanitários, fertilizações e sementeiras com maior precisão e sustentabilidade ambiental. Além disso, oferece consultoria técnica e científica, como mapeamento digital de terrenos, levantamentos térmicos e hídricos, e aconselhamento técnico em campo. Também presta consultoria de gestão agrícola, realizando análises de viabilidade, planos personalizados, monitorização de dados e otimização de recursos e insumos.
+            </p>
 
-        <h2>Produtos e Equipamentos</h2>
-        <p>
-            <strong>Drones Agrícolas:</strong> XAG P150 Max, TOPXGUN, Standard 60L.<br>
-            <strong>Veículos Autónomos:</strong> XAG R200, LJ TECH S500 Pro, LJ TECH S1000.<br>
-            <strong>GPS para Tratores:</strong> XAG APC2, NST N500.
-        </p>
+            <h2>Produtos e Equipamentos</h2>
+            <p>
+                <strong>Drones Agrícolas:</strong> XAG P150 Max, TOPXGUN, Standard 60L.<br>
+                <strong>Veículos Autónomos:</strong> XAG R200, LJ TECH S500 Pro, LJ TECH S1000.<br>
+                <strong>GPS para Tratores:</strong> XAG APC2, NST N500.
+            </p>
 
-        <h2>Serviços Completos</h2>
-        <p>
-            Vendas e consultoria personalizada, manutenção e reparação com garantia até 12 meses, formação e certificação de operadores, configuração e instalação de equipamentos em 48 horas, suporte técnico e consultoria agrícola com monitorização e planos personalizados para aumentar a eficiência em até 35%.
-        </p>
+            <h2>Serviços Completos</h2>
+            <p>
+                Vendas e consultoria personalizada, manutenção e reparação com garantia até 12 meses, formação e certificação de operadores, configuração e instalação de equipamentos em 48 horas, suporte técnico e consultoria agrícola com monitorização e planos personalizados para aumentar a eficiência em até 35%.
+            </p>
 
-        <h2>Missão, Visão e Valores</h2>
-        <p>
-            <strong>Missão:</strong> Democratizar o acesso à tecnologia agrícola de ponta, aumentando a produtividade em até 40%, reduzindo custos e promovendo práticas sustentáveis.<br>
-            <strong>Visão:</strong> Ser referência nacional em tecnologia agrícola de precisão, estabelecendo novos padrões de eficiência e sustentabilidade.<br>
-            <strong>Valores:</strong> Inovação, Fiabilidade e Sustentabilidade.
-        </p>
+            <h2>Missão, Visão e Valores</h2>
+            <p>
+                <strong>Missão:</strong> Democratizar o acesso à tecnologia agrícola de ponta, aumentando a produtividade em até 40%, reduzindo custos e promovendo práticas sustentáveis.<br>
+                <strong>Visão:</strong> Ser referência nacional em tecnologia agrícola de precisão, estabelecendo novos padrões de eficiência e sustentabilidade.<br>
+                <strong>Valores:</strong> Inovação, Fiabilidade e Sustentabilidade.
+            </p>
+            
+            <div class="noscript-alert">
+                <p><strong>📱 Experiência completa disponível:</strong> Para aceder a todas as funcionalidades do site FieldAirTech, incluindo a nossa plataforma interativa, catálogo de produtos online e simulações personalizadas, por favor ative o JavaScript no seu navegador.</p>
+                <p><a href="https://www.enable-javascript.com/pt/" target="_blank">🔧 Saiba como ativar o JavaScript no seu navegador</a></p>
+                <p><strong>Contactos alternativos:</strong><br>
+                📧 Email: geral@fieldairtech.com<br>
+                📞 Telefone: +351 123 456 789</p>
+            </div>
+        </div>
     </noscript>
     
-    <!-- SCRIPTS -->
+    <!-- SCRIPTS DA SUA APLICAÇÃO -->
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- GOOGLE ANALYTICS (REMOVA SE NÃO USAR) -->
+    <!-- GOOGLE ANALYTICS (SUBSTITUA G-XXXXXXXXXX PELO SEU ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
