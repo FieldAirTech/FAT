@@ -7,7 +7,7 @@ import p150MaxImg from '../assets/p150max.jpg';
 const p100ProImg = 'https://i.imgur.com/EjmNvne.jpeg';
 const s1000Img = 'https://i.imgur.com/UBfflHF.jpeg';
 const s500ProImg = 'https://i.imgur.com/T4VXlJ9.jpeg';
-const s450Img = 'https://i.imgur.com/dFmaM5J.jpeg';
+const s450Img = 'https://i.imgur.com/ZINKkfN.jpeg';
 const xagAPC2Img = 'https://i.imgur.com/kSA1vGU.png';
 const nstGPSImg = 'https://i.imgur.com/YliCyHq.png';
 
@@ -48,7 +48,7 @@ export default function Products() {
             />
             
             <ProductCard
-              id="p100-pro"
+              id="topxgun"
               name="TopXGun FP700"
               category="Drone de Pulverização"
               image={p100ProImg}
@@ -89,7 +89,7 @@ export default function Products() {
             />
             
             <ProductCard
-              id="s450"
+              id="R200"
               name="LJ Tech S450"
               category="Rover Agrícola"
               image={s450Img}
@@ -112,7 +112,7 @@ export default function Products() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <ProductCard
-              id="xag-apc2"
+              id="Apc2"
               name="XAG APC2"
               category="GPS para Trator"
               image={xagAPC2Img}
@@ -121,7 +121,7 @@ export default function Products() {
             />
             
             <ProductCard
-              id="nst-gps"
+              id="n500"
               name="NST GPS"
               category="GPS Profissional"
               image={nstGPSImg}
