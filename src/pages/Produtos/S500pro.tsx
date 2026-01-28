@@ -21,7 +21,7 @@ export default function S500ProPage() {
       // Hero Section
       autoSprayingTech: "TECNOLOGIA DE PULVERIZAÇÃO AUTÓNOMA",
       orchardSprayer: "Orchard Sprayer",
-      model: "S10 PRO",
+      model: "S500 PRO",
       heroDescription: "Pulverização autónoma de precisão para pomares e vinhas. Maximize a eficiência operacional e minimize o impacto ambiental com tecnologia inteligente.",
       contactSales: "Contactar Vendas",
       technicalSpecs: "Especificações Técnicas",
@@ -650,7 +650,7 @@ export default function S500ProPage() {
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                title="SLJ Tech S1000 Orchard Sprayer Demo"
+                title="LJ Tech S500 Orchard Sprayer Demo"
               />
             </div>
             <button 
