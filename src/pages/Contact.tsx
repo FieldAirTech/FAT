@@ -258,7 +258,7 @@ export default function Contact() {
 
   // Inicializar EmailJS
   useEffect(() => {
-    emailjs.init("1y9MhZkkT6oEyvL2x");
+    emailjs.init("ocntEdxzEuasLtOLL");
   }, []);
 
   const handleSubmit = async (e: FormEvent) => {
