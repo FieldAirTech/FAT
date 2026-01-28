@@ -297,7 +297,7 @@ export default function Contact() {
 
     try {
       const result = await emailjs.send(
-        'service_hecfifz',
+        'service_cta3ure',
         'template_i9d70h9',
         {
           from_name: formData.name,
