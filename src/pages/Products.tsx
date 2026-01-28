@@ -90,7 +90,7 @@ export default function Products() {
             
             <ProductCard
               id="R200"
-              name="LJ Tech S450"
+              name="XAG R200"
               category="Rover Agrícola"
               image={s450Img}
               description="Mapeamento de alta precisão"
