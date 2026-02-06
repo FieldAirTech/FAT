@@ -108,7 +108,7 @@ export const translations = {
         { step: "5", title: "Acompanhamento", desc: "Suporte e manutenção contínua" }
       ],
       advantagesList: [
-        { title: "Certificação Oficial", desc: "Únicos com certificação XAG e ANAC em Portugal" },
+        { title: "Certificação", desc: "Únicos com certificação XAG" },
         { title: "Resposta Rápida", desc: "Equipa técnica em todas as regiões de Portugal" },
         { title: "Garantia Estendida", desc: "Até 3 anos de garantia nos nossos serviços" },
         { title: "Suporte 24/7", desc: "Disponíveis durante toda a campanha agrícola" }
@@ -133,12 +133,12 @@ export const translations = {
       }
     },
     hero: {
-      officialDistributor: 'DISTRIBUIDOR OFICIAL',
+      officialDistributor: 'Distribuidor',
       title: 'Agricultura de Precisão em Portugal',
       description: 'Tecnologia XAG, LJ Tech e NST para revolucionar a sua produtividade agrícola. Soluções completas em drones, rovers e sistemas GPS.',
       viewSolutions: 'Ver Soluções',
       contactNow: 'Contactar Agora',
-      trust1: '✓ Distribuidor Oficial',
+      trust1: '✓ Distribuidor',
       trust2: '✓ Garantia 2 Anos',
       trust3: '✓ Suporte Técnico 24/7',
     },
@@ -186,7 +186,7 @@ export const translations = {
     },
     about: {
       title: 'A FieldAirTech em Portugal',
-      description1: 'Somos o distribuidor oficial XAG em Portugal, com a missão de trazer a mais avançada tecnologia de agricultura de precisão para os campos portugueses.',
+      description1: 'Somos os revendedores em Portugal, com a missão de trazer a mais avançada tecnologia de agricultura de precisão para os campos portugueses.',
       description2: 'Combinamos equipamentos de última geração com suporte técnico especializado, formação completa e acompanhamento contínuo para garantir o máximo retorno do seu investimento.',
       description3: 'Trabalhamos lado a lado com agricultores, cooperativas e empresas agrícolas para implementar soluções personalizadas que aumentam a produtividade, reduzem custos e promovem práticas agrícolas sustentáveis.',
       happyClients: 'Clientes Satisfeitos',
@@ -238,12 +238,12 @@ export const translations = {
           desc: "Desde pequenos produtores a grandes cooperativas"
         },
         hectares: {
-          value: "25K+",
+          value: "60K+",
           label: "Hectares Otimizados",
           desc: "Em todo o território nacional"
         },
         satisfacao: {
-          value: "98%",
+          value: "95%",
           label: "Taxa de Satisfação",
           desc: "Clientes satisfeitos com os nossos serviços"
         },
@@ -271,24 +271,6 @@ export const translations = {
       certificacoesSubtitle: "CERTIFICAÇÕES E PARCERIAS",
       certificacoesDesc: "Trabalhamos com as marcas mais reconhecidas e mantemos as mais altas certificações do setor",
       certificacoes: {
-        xag: {
-          title: "XAG Certified",
-          desc: "Parceiro Oficial XAG Portugal"
-        },
-        anac: {
-          title: "ANAC Licensed",
-          desc: "Operações aéreas certificadas"
-        },
-        iso: {
-          title: "ISO 9001",
-          title2: "Qualidade",
-          desc: "Gestão da qualidade certificada"
-        },
-        agricultura: {
-          title: "Agricultura",
-          title2: "Portugal",
-          desc: "Membro ativo"
-        }
       },
       ctaTitle: "a Sua Agricultura?",
       ctaSubtitle: "JUNTE-SE À REVOLUÇÃO",
@@ -830,12 +812,12 @@ export const translations = {
           desc: "From small producers to large cooperatives"
         },
         hectares: {
-          value: "25K+",
+          value: "60K+",
           label: "Optimized Hectares",
           desc: "Across the entire national territory"
         },
         satisfacao: {
-          value: "98%",
+          value: "95%",
           label: "Satisfaction Rate",
           desc: "Clients satisfied with our services"
         },
