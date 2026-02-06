@@ -9,7 +9,7 @@ export const translations = {
       contact: 'Contactos',
       news: 'Notícias',
       drones: 'Drones',
-      rovers: 'Rovers',
+      rovers: 'Rovers',F
       gps: 'GPS',
       viewAll: 'Ver todos',
       distributor: 'Distribuidor',
@@ -45,7 +45,7 @@ export const translations = {
         manutencao: {
           title: "Manutenção e Reparação",
           description: "Serviço técnico especializado e certificado para máxima fiabilidade",
-          highlight: "Garantia estendida até 12 meses",
+          highlight: "Garantia dada pelo fabricante",
           features: [
             "Manutenção preventiva programada",
             "Reparações com peças originais em stock",
@@ -110,7 +110,7 @@ export const translations = {
       advantagesList: [
         { title: "Certificação", desc: "Únicos com certificação XAG" },
         { title: "Resposta Rápida", desc: "Equipa técnica em todas as regiões de Portugal" },
-        { title: "Garantia Estendida", desc: "Até 3 anos de garantia nos nossos serviços" },
+        { title: "Garantia ", desc: "Até 12 meses de garantia dada pelo fabricante" },
         { title: "Suporte 24/7", desc: "Disponíveis durante toda a campanha agrícola" }
       ],
       packagesList: {
@@ -139,7 +139,7 @@ export const translations = {
       viewSolutions: 'Ver Soluções',
       contactNow: 'Contactar Agora',
       trust1: '✓ Distribuidor',
-      trust2: '✓ Garantia 2 Anos',
+      trust2: '✓ Garantia dada pelo fabricante',
       trust3: '✓ Suporte Técnico 24/7',
     },
     stats: {
@@ -255,9 +255,8 @@ export const translations = {
       },
       equipaTitle: "A Nossa Equipa",
       equipaSubtitle: "Especialistas em Agrotecnologia",
-      equipaText: "Contamos com uma equipa multidisciplinar de pilotos de drones certificados pela ANAC, técnicos especializados em manutenção e reparação, e engenheiros agrícolas com anos de experiência em agricultura de precisão.",
+      equipaText: "Contamos com uma equipa multidisciplinar de pilotos de drones, técnicos especializados em manutenção e reparação, e engenheiros agrícolas com anos de experiência em agricultura de precisão.",
       equipaItems: [
-        "Pilotos certificados pela ANAC",
         "Técnicos especializados em manutenção",
         "Engenheiros agrícolas experientes",
         "Suporte técnico 24/7 em todo o país"
@@ -619,7 +618,7 @@ export const translations = {
         manutencao: {
           title: "Maintenance and Repair",
           description: "Specialized and certified technical service for maximum reliability",
-          highlight: "Extended warranty up to 12 months",
+          highlight: "Extended warranty up to 12 months by the manufacturer",
           features: [
             "Scheduled preventive maintenance",
             "Repairs with original parts in stock",
@@ -682,9 +681,9 @@ export const translations = {
         { step: "5", title: "Follow-up", desc: "Support and continuous maintenance" }
       ],
       advantagesList: [
-        { title: "Official Certification", desc: "Only ones with XAG and ANAC certification in Portugal" },
+        { title: "Certification", desc: "Only ones with XAG certification in Portugal" },
         { title: "Quick Response", desc: "Technical team in all regions of Portugal" },
-        { title: "Extended Warranty", desc: "Up to 3 years warranty on our services" },
+        { title: "Warranty", desc: "Up to 12 months warranty from the manufacturer" },
         { title: "24/7 Support", desc: "Available throughout the agricultural campaign" }
       ],
       packagesList: {
@@ -707,13 +706,13 @@ export const translations = {
       }
     },
     hero: {
-      officialDistributor: 'OFFICIAL DISTRIBUTOR',
+      officialDistributor: 'DISTRIBUTOR',
       title: 'Precision Agriculture in Portugal',
       description: 'XAG, LJ Tech and NST technology to revolutionize your agricultural productivity. Complete solutions in drones, rovers and GPS systems.',
       viewSolutions: 'View Solutions',
       contactNow: 'Contact Now',
-      trust1: '✓ Official Distributor',
-      trust2: '✓ 2 Years Warranty',
+      trust1: '✓ Distributor',
+      trust2: '✓ Warranty given by the manufacturer',
       trust3: '✓ 24/7 Technical Support',
     },
     stats: {
@@ -829,9 +828,8 @@ export const translations = {
       },
       equipaTitle: "Our Team",
       equipaSubtitle: "Agrotechnology Specialists",
-      equipaText: "We have a multidisciplinary team of ANAC-certified drone pilots, specialized maintenance and repair technicians, and agricultural engineers with years of experience in precision agriculture.",
+      equipaText: "We have a multidisciplinary team of drone pilots, specialized maintenance and repair technicians, and agricultural engineers with years of experience in precision agriculture.",
       equipaItems: [
-        "ANAC certified pilots",
         "Specialized maintenance technicians",
         "Experienced agricultural engineers",
         "24/7 technical support throughout the country"
@@ -847,7 +845,7 @@ export const translations = {
       certificacoes: {
         xag: {
           title: "XAG Certified",
-          desc: "Official XAG Portugal Partner"
+          desc: "XAG Portugal Partner"
         },
         anac: {
           title: "ANAC Licensed",
