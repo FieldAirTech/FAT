@@ -149,7 +149,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center group">
               <div className="relative">
                 <img
-                  src="https://i.imgur.com/gq0vsT0.png"
+                  src="https://i.imgur.com/ycV6enj.png"
                   alt="FieldAirTech Logo"
                   className={`w-46 h-12 object-contain transition-all duration-300 ${
                     scrolled ? 'h-24' : 'h-24'
