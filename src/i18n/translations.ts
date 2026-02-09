@@ -9,7 +9,7 @@ export const translations = {
       contact: 'Contactos',
       news: 'Notícias',
       drones: 'Drones',
-      rovers: 'Rovers',F
+      rovers: 'Rovers',
       gps: 'GPS',
       viewAll: 'Ver todos',
       distributor: 'Distribuidor',
