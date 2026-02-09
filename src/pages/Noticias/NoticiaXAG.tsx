@@ -488,14 +488,6 @@ export default function NoticiaXAG() {
               <Calendar size={16} />
               <span>{formatDate(noticia.data)}</span>
             </div>
-            <div className="flex items-center gap-1">
-              <Clock size={16} />
-              <span>{noticia.tempoLeitura} {p.readingTime}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Eye size={16} />
-              <span>{noticia.visualizacoes.toLocaleString(language === 'pt' ? 'pt-PT' : 'en-US')} {p.views}</span>
-            </div>
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
