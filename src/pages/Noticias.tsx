@@ -95,8 +95,6 @@ export default function Noticias() {
       imagem: "https://i.imgur.com/TaHcbEe.jpeg",
       autor: "Field Air Tech",
       categoria: "Novidades",
-      tempoLeitura: "5",
-      visualizacoes: 1245,
       tags: language === 'pt' ? ["XAG", "P150 Max", "Agritechnica", "Novo Lançamento"] : ["XAG", "P150 Max", "Agritechnica", "New Launch"],
       enTitulo: "XAG unveils the new P150 Max drone at Agritechnica 2025",
       enResumo: "XAG presented the P150 Max and the R Series rover, reinforcing its commitment to intelligent agricultural automation with revolutionary spraying capacity.",
@@ -110,8 +108,6 @@ export default function Noticias() {
       imagem: "https://i.imgur.com/OzYMit5.png",
       autor: "Field Air Tech",
       categoria: "Tecnologia",
-      tempoLeitura: "7",
-      visualizacoes: 892,
       tags: language === 'pt' ? ["Agricultura 4.0", "Digitalização", "Eficiência", "Portugal"] : ["Agriculture 4.0", "Digitalization", "Efficiency", "Portugal"],
       enTitulo: "The present of agriculture: the smart field is already a reality",
       enResumo: "Agricultural digitization is redefining processes, reducing costs by up to 40% and increasing efficiency on Portuguese farms.",
@@ -178,14 +174,6 @@ export default function Noticias() {
                   <Calendar size={14} />
                   <span>{formatarDataExtenso(noticia.data, language)}</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <Clock size={14} />
-                  <span>{tempoLeitura} {p.readTime}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Eye size={14} />
-                  <span>{noticia.visualizacoes.toLocaleString(language === 'pt' ? 'pt-PT' : 'en-US')} {p.viewsLabel}</span>
-                </div>
               </div>
 
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
@@ -236,14 +224,6 @@ export default function Noticias() {
                 <div className="flex items-center gap-1">
                   <Calendar size={14} />
                   <span>{formatarDataExtenso(noticia.data, language)}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock size={14} />
-                  <span>{tempoLeitura} {p.readTime}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Eye size={14} />
-                  <span>{noticia.visualizacoes.toLocaleString(language === 'pt' ? 'pt-PT' : 'en-US')} {p.viewsLabel}</span>
                 </div>
               </div>
 
