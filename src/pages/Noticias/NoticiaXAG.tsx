@@ -59,8 +59,7 @@ export default function NoticiaXAG() {
     const noticiaData = language === 'pt' ? {
       titulo: "XAG revela drone P150 Max e rover série R na Agritechnica 2025",
       data: "2025-11-17",
-      autor: "Carlos Silva",
-      cargo: "Especialista em Drones Agrícolas",
+      autor: "FieldAirTech",
       tempoLeitura: "8",
       visualizacoes: 1245,
       tags: ["XAG", "P150 Max", "Agritechnica", "Drone Agrícola", "Inovação"],
@@ -230,8 +229,7 @@ export default function NoticiaXAG() {
     } : {
       titulo: "XAG unveils P150 Max drone and R Series rover at Agritechnica 2025",
       data: "2025-11-17",
-      autor: "Carlos Silva",
-      cargo: "Agricultural Drone Specialist",
+      autor: "FieldAirTech",
       tempoLeitura: "8",
       visualizacoes: 1245,
       tags: ["XAG", "P150 Max", "Agritechnica", "Agricultural Drone", "Innovation"],
