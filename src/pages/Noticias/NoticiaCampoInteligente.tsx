@@ -58,10 +58,7 @@ export default function NoticiaCampoInteligente() {
     const noticiaData = language === 'pt' ? {
       titulo: "Campo Inteligente: a transformação tecnológica que está a redefinir o futuro agrícola",
       data: "2025-11-15",
-      autor: "Maria Santos",
-      cargo: "Especialista em Agrotecnologia",
-      tempoLeitura: "7",
-      visualizacoes: 892,
+      autor: "FieldAirTech",
       tags: ["Agricultura 4.0", "Digitalização", "Eficiência", "Portugal", "Tecnologia"],
       resumo: "A digitalização agrícola está a redefinir processos, reduzir custos em até 40% e aumentar a eficiência nas explorações agrícolas portuguesas.",
       conteudo: `
@@ -191,10 +188,7 @@ export default function NoticiaCampoInteligente() {
     } : {
       titulo: "Smart Field: the technological transformation redefining the agricultural future",
       data: "2025-11-15",
-      autor: "Maria Santos",
-      cargo: "Agrotechnology Specialist",
-      tempoLeitura: "7",
-      visualizacoes: 892,
+      autor: "FieldAirTech",
       tags: ["Agriculture 4.0", "Digitalization", "Efficiency", "Portugal", "Technology"],
       resumo: "Agricultural digitization is redefining processes, reducing costs by up to 40% and increasing efficiency on Portuguese farms.",
       conteudo: `
