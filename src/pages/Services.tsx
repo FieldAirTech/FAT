@@ -116,33 +116,6 @@ export default function Services() {
     }
   ];
 
-  // Obter pacotes
-  const packagesData = tObject('services.packagesList');
-  const packages = [
-    {
-      name: packagesData.basico?.name || "Pacote Básico",
-      price: packagesData.basico?.price || "Sob Consulta",
-      color: "border-gray-300",
-      features: packagesData.basico?.features || [],
-      recommended: false
-    },
-    {
-      name: packagesData.profissional?.name || "Pacote Profissional",
-      price: packagesData.profissional?.price || "Sob Consulta",
-      color: "border-green-500",
-      features: packagesData.profissional?.features || [],
-      recommended: true,
-      badge: packagesData.profissional?.badge || "Mais Popular"
-    },
-    {
-      name: packagesData.empresarial?.name || "Pacote Empresarial",
-      price: packagesData.empresarial?.price || "Sob Consulta",
-      color: "border-blue-500",
-      features: packagesData.empresarial?.features || [],
-      recommended: false
-    }
-  ];
-
   // Obter dados dinâmicos
   const processSteps = tArray('services.processSteps');
   const advantagesList = tArray('services.advantagesList');
