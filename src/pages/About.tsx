@@ -254,126 +254,88 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* Equipa e Localização - Com layout melhorado */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Foto sugerida aqui: Equipa técnica em formação ou em campo */}
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-10 border border-gray-200">
-              <div className="flex items-center gap-4 mb-10">
-                <div className="p-4 bg-gradient-to-br from-emerald-100 to-green-100 rounded-2xl">
-                  <Users className="text-emerald-600" size={32} />
-                </div>
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900">{t('about.equipaTitle')}</h2>
-                  <p className="text-emerald-600 font-medium mt-2">{t('about.equipaSubtitle')}</p>
-                </div>
-              </div>
-              
-              <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                {t('about.equipaText')}
-              </p>
-              
-              <div className="space-y-4">
-                {t('about.equipaItems', { returnObjects: true }).map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-4 p-4 bg-gray-50/50 rounded-xl hover:bg-gray-50 transition-colors">
-                    <CheckCircle className="text-emerald-600" size={20} />
-                    <span className="text-gray-700 font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Foto sugerida aqui: Mapa de Portugal com pontos de atuação */}
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-10 border border-gray-200">
-              <div className="flex items-center gap-4 mb-10">
-                <div className="p-4 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl">
-                  <MapPin className="text-blue-600" size={32} />
-                </div>
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900">{t('about.localizacaoTitle')}</h2>
-                  <p className="text-blue-600 font-medium mt-2">{t('about.localizacaoSubtitle')}</p>
-                </div>
-              </div>
-              
-              <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                {t('about.localizacaoText')}
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4">
-                {[t('about.localizacaoSede')].map((region, index) => (
-                  <div key={index} className="group">
-                    <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-5 text-center hover:from-emerald-100 hover:to-green-100 transition-all duration-300">
-                      <div className="font-bold text-emerald-700 text-lg">{region}</div>
-                      {index === 0 && (
-                        <div className="text-emerald-600 text-sm mt-1">{t('about.localizacaoSedeDesc')}</div>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+{/* Equipa e Localização - Com layout melhorado */}
+<section className="py-20">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-16">
+      
+      {/* Foto sugerida aqui: Equipa técnica em formação ou em campo */}
+      <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-10 border border-gray-200">
+        <div className="flex items-center gap-4 mb-10">
+          <div className="p-4 bg-gradient-to-br from-emerald-100 to-green-100 rounded-2xl">
+            <Users className="text-emerald-600" size={32} />
           </div>
-        </div>
-      </section>
-
-      {/* Certificações - Design Moderno*/}
-      <section className="min-h-screen py-20 bg-gradient-to-b from-gray-50 to-white flex flex-col justify-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col items-center justify-center text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-100 to-green-100 rounded-full mb-6">
-              <Award className="text-emerald-600" size={20} />
-              <span className="text-sm font-semibold text-emerald-700">{t('about.certificacoesSubtitle')}</span>
-            </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">
-              <span className="text-emerald-600">{t('about.certificacoesTitle')}</span>
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900">
+              {t('about.equipaTitle')}
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              {t('about.certificacoesDesc')}
+            <p className="text-emerald-600 font-medium mt-2">
+              {t('about.equipaSubtitle')}
             </p>
           </div>
-          
-          {/* Container para o grid também centralizado */}
-          <div className="flex justify-center w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full">
-              {[
-                { 
-                  title: t('about.certificacoes.anac.title'), 
-                  desc: t('about.certificacoes.anac.desc'),
-                  color: "from-blue-50 to-cyan-50"
-                },
-                { 
-                  title: t('about.certificacoes.iso.title'), 
-                  title2: t('about.certificacoes.iso.title2'), 
-                  desc: t('about.certificacoes.iso.desc'),
-                  color: "from-purple-50 to-pink-50"
-                },
-                { 
-                  title: t('about.certificacoes.agricultura.title'), 
-                  title2: t('about.certificacoes.agricultura.title2'), 
-                  desc: t('about.certificacoes.agricultura.desc'),
-                  color: "from-amber-50 to-orange-50"
-                }
-              ].map((cert, index) => (
-                <div 
-                  key={index}
-                  className={`bg-gradient-to-br ${cert.color} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col justify-between`}
-                >
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{cert.title}</h3>
-                    {cert.title2 && (
-                      <h4 className="text-xl font-semibold text-gray-800 mb-4">{cert.title2}</h4>
-                    )}
-                    <p className="text-gray-700 text-lg">{cert.desc}</p>
-                  </div>
-                </div>
-              ))}
+        </div>
+        
+        <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+          {t('about.equipaText')}
+        </p>
+        
+        <div className="space-y-4">
+          {t('about.equipaItems', { returnObjects: true }).map((item, idx) => (
+            <div
+              key={idx}
+              className="flex items-center gap-4 p-4 bg-gray-50/50 rounded-xl hover:bg-gray-50 transition-colors"
+            >
+              <CheckCircle className="text-emerald-600" size={20} />
+              <span className="text-gray-700 font-medium">{item}</span>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Foto sugerida aqui: Mapa de Portugal com pontos de atuação */}
+      <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-10 border border-gray-200">
+        <div className="flex items-center gap-4 mb-10">
+          <div className="p-4 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl">
+            <MapPin className="text-blue-600" size={32} />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900">
+              {t('about.localizacaoTitle')}
+            </h2>
+            <p className="text-blue-600 font-medium mt-2">
+              {t('about.localizacaoSubtitle')}
+            </p>
           </div>
         </div>
-      </section>
+        
+        <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+          {t('about.localizacaoText')}
+        </p>
+        
+        <div className="grid grid-cols-2 gap-4">
+          {[t('about.localizacaoSede')].map((region, index) => (
+            <div key={index} className="group">
+              <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-5 text-center hover:from-emerald-100 hover:to-green-100 transition-all duration-300">
+                <div className="font-bold text-emerald-700 text-lg">
+                  {region}
+                </div>
+                {index === 0 && (
+                  <div className="text-emerald-600 text-sm mt-1">
+                    {t('about.localizacaoSedeDesc')}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* CTA Final - Design Premium */}
+
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 rounded-3xl shadow-2xl p-12 text-center text-white">
