@@ -186,7 +186,7 @@ export const translations = {
     },
     about: {
       title: 'A FieldAirTech em Portugal',
-      description1: 'Somos os revendedores em Portugal, com a missão de trazer a mais avançada tecnologia de agricultura de precisão para os campos portugueses.',
+      description1: 'Somos revendedores autorizados em Portugal, com a missão de trazer a mais avançada tecnologia de agricultura de precisão para os campos portugueses.',
       description2: 'Combinamos equipamentos de última geração com suporte técnico especializado, formação completa e acompanhamento contínuo para garantir o máximo retorno do seu investimento.',
       description3: 'Trabalhamos lado a lado com agricultores, cooperativas e empresas agrícolas para implementar soluções personalizadas que aumentam a produtividade, reduzem custos e promovem práticas agrícolas sustentáveis.',
       happyClients: 'Clientes Satisfeitos',
@@ -198,7 +198,7 @@ export const translations = {
         foundedDesc: "Pioneiros em Portugal",
         location: "Sede em Coruche",
         locationDesc: "Coração do Ribatejo",
-        clients: "+500 Clientes",
+        clients: "+200 Clientes",
         clientsDesc: "Em todo o país"
       },
       missaoTitle: "A Nossa Missão",
@@ -273,7 +273,7 @@ export const translations = {
       },
       ctaTitle: "a Sua Agricultura?",
       ctaSubtitle: "JUNTE-SE À REVOLUÇÃO",
-      ctaText: "Junte-se a mais de 500 agricultores portugueses que já estão a transformar as suas operações com tecnologia de ponta da FieldAirTech.",
+      ctaText: "Junte-se a mais de 200 agricultores portugueses que já estão a transformar as suas operações com tecnologia de ponta da FieldAirTech.",
       ctaButtons: {
         demo: "AGENDAR DEMONSTRAÇÃO",
         phone: "📞 +351 934 449 370"
@@ -771,7 +771,7 @@ export const translations = {
         foundedDesc: "Pioneers in Portugal",
         location: "Headquarters in Coruche",
         locationDesc: "Heart of Ribatejo",
-        clients: "+500 Clients",
+        clients: "+200 Clients",
         clientsDesc: "Throughout the country"
       },
       heroFirstPart: "The Force Behind the",
@@ -864,7 +864,7 @@ export const translations = {
       },
       ctaTitle: "Your Agriculture?",
       ctaSubtitle: "JOIN THE REVOLUTION",
-      ctaText: "Join over 500 Portuguese farmers who are already transforming their operations with FieldAirTech's cutting-edge technology.",
+      ctaText: "Join over 200 Portuguese farmers who are already transforming their operations with FieldAirTech's cutting-edge technology.",
       ctaButtons: {
         demo: "SCHEDULE DEMONSTRATION",
         phone: "📞 +351 934 449 370"
