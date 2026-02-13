@@ -95,7 +95,7 @@ const defaultTranslations = {
       map: {
         sectionTitle: "ENCONTRE-NOS",
         title: "Visite as Nossas <span class='text-emerald-600'>Instalações</span>",
-        description: "Conheça nossa estrutura e equipe especializada",
+        description: "Conheça a nossa estrutura e equipa especializada",
         locationTitle: "Estamos em Coruche",
         locationDescription: "Nossa sede está localizada no coração da região agrícola, pronta para atendê-lo.",
         address1: "Estrada 115, 117 - Biscainho",
@@ -420,9 +420,6 @@ export default function Contact() {
               </span>
             </h1>
 
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              {t.description || 'Tem dúvidas? Estamos aqui para ajudar. Contacte-nos hoje.'}
-            </p>
           </div>
 
           {/* Quick Contact Cards */}
@@ -796,7 +793,7 @@ export default function Contact() {
             <h2 className="text-4xl font-bold text-gray-900 mb-6" 
                 dangerouslySetInnerHTML={{ __html: t.map?.title || 'Visite as Nossas <span class="text-emerald-600">Instalações</span>' }} />
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              {t.map?.description || 'Conheça nossa estrutura e equipe especializada'}
+              {t.map?.description || 'Conheça a nossa estrutura e equipa especializada'}
             </p>
           </div>
           
