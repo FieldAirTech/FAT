@@ -334,11 +334,6 @@ export default function Services() {
                   {t('services.ready')}
                 </h2>
                 
-                {/* Descrição */}
-                <p className="text-xl text-emerald-100 mb-12 max-w-2xl mx-auto leading-relaxed">
-                  {t('services.readyDesc')}
-                </p>
-                
                 {/* Botões principais */}
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
                   <a
