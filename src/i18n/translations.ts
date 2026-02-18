@@ -24,7 +24,7 @@ export const translations = {
       ourServicesDesc: "Soluções abrangentes que cobrem todas as necessidades da sua operação agrícola",
       packages: "Pacotes de Serviços",
       packagesDesc: "Escolha o pacote que melhor se adapta às necessidades da sua exploração",
-      process: "Como Trabalhamos",
+      process: "Transparência em tudo o que fazemos",
       processDesc: "Um processo claro e eficiente desde o primeiro contacto até à implementação",
       advantages: "Porquê Escolher a Field AirTech?",
       advantagesDesc: "Diferenças que fazem a diferença na sua operação agrícola",
