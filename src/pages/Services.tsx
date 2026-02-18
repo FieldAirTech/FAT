@@ -255,10 +255,6 @@ export default function Services() {
               </span>
             </div>
             
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              {t('services.advantages')}
-            </h2>
-            
             <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
               {t('services.advantagesDesc')}
             </p>
