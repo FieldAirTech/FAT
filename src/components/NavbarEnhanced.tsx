@@ -149,10 +149,10 @@ export default function Navbar() {
             <Link to="/" className="flex items-center group">
               <div className="relative">
                 <img
-                  src="https://i.imgur.com/AS2cC9s.png"
+                  src="https://imgur.com/a/g3QlcUx"
                   alt="FieldAirTech Logo"
-className={`h-28 md:h-36 object-contain transition-all duration-300 ${
-  scrolled ? 'h-20 md:h-28' : ''
+className={`h-32 md:h-40 object-contain transition-all duration-300 ${
+  scrolled ? 'h-24 md:h-32' : ''
 }`}
                 />
               </div>
