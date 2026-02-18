@@ -327,10 +327,6 @@ const stats = [
             {t('cta.ready')}
           </h2>
 
-          <p className="text-emerald-100 text-xl mb-10 max-w-2xl mx-auto">
-            {t('cta.schedule')}
-          </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contactos"
