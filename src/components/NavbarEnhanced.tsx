@@ -151,7 +151,7 @@ export default function Navbar() {
                 <img
                   src="https://i.imgur.com/AS2cC9s.png"
                   alt="FieldAirTech Logo"
-                  className={`h-16 md:h-20 object-contain ${scrolled ? 'h-12 md:h-16'
+                  className={`h-24 md:h-32 object-contain ${scrolled ? 'h-16 md:h-24'
                   }`}
                 />
               </div>
