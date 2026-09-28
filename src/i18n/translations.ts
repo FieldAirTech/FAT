@@ -411,7 +411,7 @@ export const translations = {
             "Tanque de Líquido Inteligente com sensor pneumático capilar",
             "Design de tampas aninhadas para enchimento rápido"
           ],
-          applications: ["Milho", "Arroz", "Algodão", "Citrinos", "Pitaya", "Batata", "Banana", "Rosa"]
+          applications: ["Milho", "Arroz", "Hortícolas", "Citrinos", "Vinha", "Batata", "Banana", "Rosa"]
         },
         {
           id: 2,
@@ -1099,7 +1099,7 @@ export const translations = {
             "Smart Liquid Tank with capillary pneumatic sensor",
             "Nested lid design for quick filling"
           ],
-          applications: ["Corn", "Rice", "Cotton", "Citrus", "Dragon Fruit", "Potato", "Banana", "Rose"]
+          applications: ["Corn", "Rice", "Cotton", "Citrus", "Vineyard", "Potato", "Banana", "Rose"]
         },
         {
           id: 2,
