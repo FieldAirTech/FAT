@@ -40,7 +40,7 @@ export default function R200Page() {
           description: "Até 12h de operação contínua"
         },
         {
-          icon: <SprayCan className="text-cyan-600" size={28} />,
+          icon: <Target className="text-cyan-600" size={28} />,
           title: "Pulverização de Precisão",
           description: "Controlo de taxa variável"
         },
@@ -182,7 +182,7 @@ export default function R200Page() {
           description: "Up to 12h continuous operation"
         },
         {
-          icon: <SprayCan className="text-cyan-600" size={28} />,
+          icon: <Target className="text-cyan-600" size={28} />,
           title: "Precision Spraying",
           description: "Variable rate control"
         },
