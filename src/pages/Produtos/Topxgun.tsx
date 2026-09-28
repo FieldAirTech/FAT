@@ -38,10 +38,10 @@ export default function TopXGun() {
       watchVideo: "Ver Vídeo",
 
       // Hero Section
-      proAgriDrone: "DRONE AGRÍCOLA PROFISSIONAL 2025",
+      proAgriDrone: "DRONE AGRÍCOLA PROFISSIONAL 2026",
       heroTitle: "TopXGun",
       model: "FP700",
-      heroDescription: "O drone agrícola de última geração para 2025. Equipado com tanque de 60L para pulverização, 80L para distribuição, proteção IP67 e inteligência avançada para operações autónomas.",
+      heroDescription: "O drone agrícola de última geração para 2026. Equipado com tanque de 60L para pulverização, 80L para distribuição, proteção IP67 e inteligência avançada para operações autónomas.",
       requestDemo: "Solicitar Demonstração",
       completeTechSheet: "Ficha Técnica Completa",
       maxLoad: "Carga Máxima",
@@ -64,7 +64,7 @@ export default function TopXGun() {
       
       technologySections: [
         {
-          title: "Sistema de Evitação de Obstáculos",
+          title: "Sistema de Evitar de Obstáculos",
           description: "Equipado com sensores avançados que permitem navegação segura mesmo em áreas complexas com árvores, cabos e estruturas.",
           image: "https://i.imgur.com/cP2a9WV.jpeg",
           details: [
@@ -77,7 +77,7 @@ export default function TopXGun() {
         },
         {
           title: "Sistema de Pulverização de Alto Desempenho",
-          description: "Bomba dosadora de alto fluxo de duplo canal desenvolvida para máxima eficiência e cobertura uniforme.",
+          description: "Bomba doseadora de alto fluxo de duplo canal desenvolvida para máxima eficiência e cobertura uniforme.",
           image: "https://i.imgur.com/69GkWjg.png",
           details: [
             "Bomba de duplo canal de alto fluxo",
@@ -100,7 +100,7 @@ export default function TopXGun() {
         },
         {
           title: "Criação de Mapas HD",
-          description: "Sistema de mapeamento de alta definição que permite planejamento preciso de operações e análise detalhada do terreno.",
+          description: "Sistema de mapeamento de alta definição que permite planeaamento preciso de operações e análise detalhada do terreno.",
           image: "https://i.imgur.com/yms7fQo.jpeg",
           details: [
             "Resolução de mapeamento avançada",
@@ -121,11 +121,11 @@ export default function TopXGun() {
           title: "Sistema de Bicos",
           description: "Bicos de pulverização de precisão com múltiplos padrões de aspersão para aplicação versátil",
           image: "https://i.imgur.com/UDlp6nt.jpeg",
-          features: ["Múltiplos bicos", "Controle de fluxo preciso", "Padrões ajustáveis", "Anti-gotejamento"]
+          features: ["Múltiplos bicos", "Controle de fluxo preciso", "Padrões ajustáveis", "Sistema antigota"]
         },
         {
           title: "Bomba Dosadora de Alto Fluxo",
-          description: "Sistema de bombeamento de duplo canal desenvolvido para alta vazão e durabilidade.",
+          description: "Sistema de bombeamento de duplo canal desenvolvido para elevado caudal e durabilidade.",
           image: "https://i.imgur.com/jqoRHDT.jpeg",
           features: ["Duplo canal", "Vazão até 40 L/min", "Alta durabilidade", "Manutenção simplificada"]
         }
@@ -178,7 +178,7 @@ export default function TopXGun() {
       // CTA Section
       scheduleDemo: "AGENDE SUA DEMONSTRAÇÃO",
       transformAgriOp: "Transforme sua Operação Agrícola",
-      ctaDescription: "O TopXGun FP700 está pronto para elevar a produtividade da sua fazenda a um novo nível. Entre em contacto para uma demonstração personalizada.",
+      ctaDescription: "O TopXGun FP700 está pronto para elevar a produtividade da sua produção a um novo nível. Entre em contacto para uma demonstração personalizada.",
       
       // Stats in CTA
       support247: "Suporte Técnico",
