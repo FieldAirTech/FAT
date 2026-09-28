@@ -316,14 +316,6 @@ export default function Services() {
                 }} />
               </div>
               
-              <div className="relative z-10 p-12 md:p-16 text-center text-white">
-                {/* Badge superior */}
-                <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full mb-8 border border-white/20">
-                  <Target className="text-white" size={20} />
-                  <span className="text-sm font-semibold tracking-wide">
-                    {t('services.ready')}
-                  </span>
-                </div>
                 
                 {/* Título principal - usando as traduções existentes */}
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
