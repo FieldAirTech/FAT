@@ -517,28 +517,6 @@ export default function PoliticaPrivacidade() {
           ))}
         </div>
 
-        {/* Download Section */}
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-10 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">
-            {activeLanguage === 'pt' ? 'Versão para Download' : 'Download Version'}
-          </h3>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            {activeLanguage === 'pt' 
-              ? 'Descarregue a versão completa da nossa Política de Privacidade em formato PDF para os seus registos.' 
-              : 'Download the complete version of our Privacy Policy in PDF format for your records.'}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              <FileText size={20} />
-              {activeLanguage === 'pt' ? 'Descarregar PDF' : 'Download PDF'}
-            </button>
-            <button className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              <Mail size={20} />
-              {activeLanguage === 'pt' ? 'Solicitar por Email' : 'Request by Email'}
-            </button>
-          </div>
-        </div>
 
         {/* Contact Information */}
         <div className="mt-16 bg-gray-50 rounded-2xl p-8">
