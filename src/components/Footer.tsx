@@ -33,7 +33,7 @@ export default function Footer() {
       products: "Produtos",
       services: "Serviços",
       about: "Sobre Nós",
-      blog: "Blog",
+      blog: "Notícias",
       privacy: "Política de Privacidade",
       socialMedia: "Redes Sociais",
       followUs: "Siga-nos para as últimas novidades",
