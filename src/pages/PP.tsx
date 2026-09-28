@@ -398,7 +398,7 @@ export default function PoliticaPrivacidade() {
   const currentContent = content[activeLanguage];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-48">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Language Selector */}
