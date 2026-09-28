@@ -182,7 +182,7 @@ export default function R200Page() {
           description: "Up to 12h continuous operation"
         },
         {
-          icon: <Target className="text-cyan-600" size={28} />,
+          icon: <SprayCan className="text-cyan-600" size={28} />,
           title: "Precision Spraying",
           description: "Variable rate control"
         },
