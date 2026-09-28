@@ -3,7 +3,7 @@ import React, { useState, useMemo } from 'react';
 import { Link } from "react-router-dom";
 import { 
   Play, Check, FileText, ChevronRight, 
-  Navigation, Battery, Target, Eye, Cpu, Map, 
+  Navigation, Battery, SprayCan, Target, Eye, Cpu, Map, 
   Users, Smartphone, BarChart3, Zap, Shield, 
   Droplets, Wind, ArrowRight, X,
   Cloud, Tree, Settings, Video, Globe
@@ -40,7 +40,7 @@ export default function R200Page() {
           description: "Até 12h de operação contínua"
         },
         {
-          icon: <Target className="text-white" size={28} />,
+          icon: <SprayCan className="text-white" size={28} />,
           title: "Pulverização de Precisão",
           description: "Controlo de taxa variável"
         },
