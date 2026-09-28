@@ -332,45 +332,31 @@ export default function APC2Page() {
           </div>
         </div>
 
-        {/* Destaques com Dual Language */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-6 mt-24 pt-12 border-t border-gray-200">
-          {p.features.map((f, i) => (
-            <div 
-              key={i} 
-              className="feature-card group p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-default relative overflow-hidden"
-            >
-              {/* Conteúdo Principal */}
-              <div className="relative z-10">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <div className="text-blue-600">
-                    {f.icon}
-                  </div>
-                </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-2 text-center">{f.title}</h3>
-                <p className="text-sm text-gray-600 text-center">{f.desc}</p>
-              </div>
-              
-              {/* Overlay com tradução */}
-              <div className="en-overlay">
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full mb-2">
-                    {language === 'pt' ? 'ENGLISH' : 'PORTUGUÊS'}
-                  </span>
-                </div>
-                <h3 className="font-bold text-lg text-gray-900 mb-2">
-                  {language === 'pt' ? f.enTitle : f.ptTitle}
-                </h3>
-                <p className="text-sm text-gray-600">
-                  {language === 'pt' ? f.enDesc : f.ptDesc}
-                </p>
-                <div className="mt-4 flex items-center gap-1 text-blue-600 text-xs">
-                  <Eye size={12} />
-                  <span>Hover to see in {language === 'pt' ? 'English' : 'Portuguese'}</span>
-                </div>
-              </div>
-            </div>
-          ))}
+{/* Destaques */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-6 mt-24 pt-12 border-t border-gray-200">
+  {p.features.map((f, i) => (
+    <div
+      key={i}
+      className="p-6 bg-white rounded-2xl shadow-lg"
+    >
+      <div className="relative z-10">
+        <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow flex items-center justify-center mb-6">
+          <div className="text-blue-600">
+            {f.icon}
+          </div>
         </div>
+
+        <h3 className="font-bold text-lg text-gray-900 mb-2 text-center">
+          {f.title}
+        </h3>
+
+        <p className="text-sm text-gray-600 text-center">
+          {f.desc}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
       </section>
 
        {/* 2. Video Section */}
