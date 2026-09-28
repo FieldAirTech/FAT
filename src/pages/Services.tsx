@@ -203,9 +203,6 @@ export default function Services() {
                 {t('services.process')}
               </span>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              {t('services.process')} <span className="text-emerald-600"></span>
-            </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
               {t('services.processDesc')}
             </p>
