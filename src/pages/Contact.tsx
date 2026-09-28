@@ -816,7 +816,7 @@ export default function Contact() {
                     <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full"></div>
                     <MapPin className="relative text-white" size={80} />
                   </div>
-                  <h3 className="text-3xl font-bold mb-6">{t.map?.locationTitle || 'Estamos em Coruche'}</h3>
+                  <h3 className="text-3xl font-bold mb-6 text-white">{t.map?.locationTitle || 'Estamos em Coruche'}</h3>
                   <p className="text-xl text-white/90 mb-8 max-w-md leading-relaxed">
                     {t.map?.locationDescription || 'Nossa sede está localizada no coração da região agrícola, pronta para atendê-lo.'}
                   </p>
