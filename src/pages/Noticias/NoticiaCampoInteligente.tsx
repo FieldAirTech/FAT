@@ -1,541 +1,1003 @@
-import { useEffect, useState } from "react";
-import { Calendar, User, Clock, Share2, Bookmark, ArrowLeft, Tag, Eye } from "lucide-react";
+// src/pages/Produtos/R200.tsx
+
+import React, { useState, useMemo } from 'react';
 import { Link } from "react-router-dom";
+import {
+  Play,
+  Check,
+  FileText,
+  ChevronRight,
+  Navigation,
+  Battery,
+  SprayCan,
+  Target,
+  Eye,
+  Cpu,
+  Map,
+  Users,
+  Smartphone,
+  BarChart3,
+  Zap,
+  Shield,
+  Droplets,
+  Wind,
+  ArrowRight,
+  X,
+  Cloud,
+  Tree,
+  Settings,
+  Video,
+  Globe
+} from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { translations } from '../../i18n/translations';
 
-export const route = "/noticia-campo-inteligente";
-
-export default function NoticiaCampoInteligente() {
-  const [noticia, setNoticia] = useState<any>(null);
+export default function R200Page() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const { language } = useLanguage();
   const t = translations[language];
 
-  // Page texts
-  const pageTexts = {
+  const pageTexts = useMemo(() => ({
     pt: {
-      backButton: "Voltar às Notícias",
-      readingTime: "de leitura",
-      views: "visualizações",
-      author: "Autor",
-      tagsLabel: "Tags:",
-      saveButton: "Guardar",
-      shareButton: "Partilhar",
-      newsletterTitle: "Gostou deste artigo?",
-      newsletterDescription: "Subscreva a nossa newsletter e receba artigos como este diretamente no seu email, além das últimas novidades em tecnologia agrícola.",
-      emailPlaceholder: "Seu email",
-      subscribeButton: "Subscrever",
-      privacyNote: "Prometemos não enviar spam. Pode cancelar quando quiser.",
-      relatedArticles: "Artigos Relacionados",
-      newLaunch: "NOVO LANÇAMENTO",
-      practicalGuide: "GUIA PRÁTICO",
-      comingSoon: "Em breve...",
+
+      // Hero Section
+      autoSprayingTech: "VEÍCULO AGRÍCOLA AUTÓNOMO",
+      model: "XAG R200",
+
+      heroDescription:
+        "O XAG R200 é um veículo agrícola autónomo desenvolvido para operações de pulverização em pomares, vinhas e outras culturas de linhas. Combina tração 6x6, navegação inteligente e o sistema RevoSpray para realizar aplicações de forma controlada e repetível.",
+
+      contactSales: "Contactar Vendas",
+      technicalSpecs: "Especificações Técnicas",
+      watchVideo: "Ver Vídeo",
+      backToProducts: "Voltar aos Produtos",
+
+      // Features Icons
+      features: [
+        {
+          icon: <Navigation className="text-red-600" size={28} />,
+          title: "Navegação Autónoma",
+          description: "RTK + seguimento inteligente de trajetórias"
+        },
+        {
+          icon: <Droplets className="text-green-600" size={28} />,
+          title: "RevoSpray 240 L",
+          description: "4 bombas e 4 JetSprayers"
+        },
+        {
+          icon: <Target className="text-cyan-600" size={28} />,
+          title: "Pulverização Direcionada",
+          description: "Gotas ajustáveis de 60–200 μm"
+        },
+        {
+          icon: <Eye className="text-purple-600" size={28} />,
+          title: "Visão em Tempo Real",
+          description: "Câmara FPV e comando SRC 5"
+        }
+      ],
+
+      // Precision Spraying Section
+      greenRevolution: "SISTEMA REVOSPRAY",
+      precisionSpraying: "Pulverização",
+      precision: "Direcionada",
+
+      precisionDescription:
+        "O sistema RevoSpray foi desenvolvido para controlar a aplicação diretamente na zona de vegetação. O R200 utiliza quatro bombas de impulsor flexível e quatro atomizadores centrífugos JetSprayer, permitindo configurar a pulverização de acordo com a cultura e a operação.",
+
+      precisionFeatures: [
+        "Depósito inteligente com capacidade de 240 L",
+        "Quatro bombas de impulsor flexível com caudal combinado até 16 L/min",
+        "Atomização centrífuga com tamanho de gota ajustável entre 60 e 200 μm",
+        "JetSprayers com fluxo de ar direcionado para favorecer a penetração na copa"
+      ],
+
+      // Deployment Section
+      effortlessDeployment: "NAVEGAÇÃO E AUTOMAÇÃO",
+      continuousScalable: "Percursos",
+      continuousScalableHighlight: "Inteligentes e Repetíveis",
+
+      deploymentDescription:
+        "O XAG R200 permite transformar uma primeira passagem manual num percurso que pode ser repetido de forma autónoma. O sistema combina RTK, visão computacional, mapeamento e controlo inteligente da trajetória.",
+
+      deploymentFeatures: [
+        {
+          icon: <Map className="text-orange-400" size={20} />,
+          title: "RealTerra",
+          description:
+            "Criação de mapas da área através das imagens captadas durante a primeira passagem."
+        },
+        {
+          icon: <Navigation className="text-orange-400" size={20} />,
+          title: "Path Tracking",
+          description:
+            "Deteção e correção de desvios da trajetória durante o movimento."
+        },
+        {
+          icon: <Cpu className="text-orange-400" size={20} />,
+          title: "Repeat Mode",
+          description:
+            "Registo de percursos para posterior repetição autónoma da operação."
+        }
+      ],
+
+      // Smart Management Section
+      smartManagement: "CONTROLO DO EQUIPAMENTO",
+      oneTapControl: "Operação",
+      oneTapControlHighlight: "à Distância",
+
+      managementDescription:
+        "O comando SRC 5 disponibiliza ao operador uma interface dedicada para acompanhar e controlar o XAG R200 durante as operações no campo.",
+
+      managementFeatures: [
+        {
+          icon: <Smartphone className="text-purple-600" size={28} />,
+          title: "Comando SRC 5",
+          description:
+            "Comando equipado com ecrã tátil de 7 polegadas para controlo do equipamento."
+        },
+        {
+          icon: <Eye className="text-purple-600" size={28} />,
+          title: "Câmara FPV",
+          description:
+            "Campo de visão horizontal até 150° para acompanhar o equipamento em tempo real."
+        },
+        {
+          icon: <GaugeIcon className="text-purple-600" size={28} />,
+          title: "Cruise Mode",
+          description:
+            "Controlo da velocidade de deslocação entre 0,1 e 1,5 m/s."
+        },
+        {
+          icon: <Shield className="text-purple-600" size={28} />,
+          title: "Assistência à Segurança",
+          description:
+            "Sistema de deteção de pessoas e obstáculos para apoio à operação autónoma."
+        }
+      ],
+
+      // Technical Capabilities Section
+      provenROI: "CARACTERÍSTICAS DO R200",
+      aiDriven: "Construído para",
+      aiDrivenHighlight: "Operações Agrícolas",
+
+      roiDescription:
+        "Uma plataforma elétrica compacta concebida para circular entre linhas e executar operações agrícolas de forma autónoma e controlada.",
+
+      roiStats: [
+        {
+          value: "240 L",
+          label: "Capacidade do Depósito",
+          icon: <Droplets className="text-yellow-400" size={24} />,
+          description:
+            "Depósito RevoSpray com sensor inteligente de nível de líquido."
+        },
+        {
+          value: "16 L/min",
+          label: "Caudal Máximo",
+          icon: <Zap className="text-green-400" size={24} />,
+          description:
+            "Caudal combinado máximo das quatro bombas de pulverização."
+        },
+        {
+          value: "6x6",
+          label: "Tração Independente",
+          icon: <Navigation className="text-red-400" size={24} />,
+          description:
+            "Seis rodas com acionamento independente para circulação no terreno."
+        }
+      ],
+
+      // CTA Section
+      transformOrchard: "Automatize as Operações do Seu Pomar",
+
+      ctaDescription:
+        "O XAG R200 reúne pulverização, navegação autónoma, mapeamento e tração 6x6 numa única plataforma agrícola. Conheça o equipamento e descubra como pode ser integrado às suas operações.",
+
+      watchDemo: "Ver Demonstração",
+
+      ctaSubtitle:
+        "Agende uma demonstração • Conheça o equipamento no terreno • Suporte técnico FieldAirTech",
+
+      // Floating Button
+      technicalSpecifications: "Especificações Técnicas",
+
+      // Modal
+      close: "Fechar",
+
+      // Alt texts
+      altHero: "XAG R200 em operação",
+      altPrecisionSpray: "Sistema de pulverização RevoSpray do XAG R200",
+      altDeployment: "Sistema de navegação e planeamento do XAG R200",
+      altAppInterface: "Interface de controlo do XAG R200"
     },
+
     en: {
-      backButton: "Back to News",
-      readingTime: "read",
-      views: "views",
-      author: "Author",
-      tagsLabel: "Tags:",
-      saveButton: "Save",
-      shareButton: "Share",
-      newsletterTitle: "Did you like this article?",
-      newsletterDescription: "Subscribe to our newsletter and receive articles like this directly in your email, plus the latest news in agricultural technology.",
-      emailPlaceholder: "Your email",
-      subscribeButton: "Subscribe",
-      privacyNote: "We promise not to send spam. You can cancel anytime.",
-      relatedArticles: "Related Articles",
-      newLaunch: "NEW LAUNCH",
-      practicalGuide: "PRACTICAL GUIDE",
-      comingSoon: "Coming soon...",
+
+      // Hero Section
+      autoSprayingTech: "AUTONOMOUS AGRICULTURAL VEHICLE",
+      model: "XAG R200",
+
+      heroDescription:
+        "The XAG R200 is an autonomous agricultural vehicle developed for spraying operations in orchards, vineyards and other row crops. It combines 6x6 traction, intelligent navigation and the RevoSpray system for controlled and repeatable applications.",
+
+      contactSales: "Contact Sales",
+      technicalSpecs: "Technical Specifications",
+      watchVideo: "Watch Video",
+      backToProducts: "Back to Products",
+
+      // Features Icons
+      features: [
+        {
+          icon: <Navigation className="text-red-600" size={28} />,
+          title: "Autonomous Navigation",
+          description: "RTK + intelligent path tracking"
+        },
+        {
+          icon: <Droplets className="text-green-600" size={28} />,
+          title: "240 L RevoSpray",
+          description: "4 pumps and 4 JetSprayers"
+        },
+        {
+          icon: <Target className="text-cyan-600" size={28} />,
+          title: "Targeted Spraying",
+          description: "Adjustable 60–200 μm droplets"
+        },
+        {
+          icon: <Eye className="text-purple-600" size={28} />,
+          title: "Real-Time Vision",
+          description: "FPV camera and SRC 5 controller"
+        }
+      ],
+
+      // Precision Spraying Section
+      greenRevolution: "REVOSPRAY SYSTEM",
+      precisionSpraying: "Targeted",
+      precision: "Spraying",
+
+      precisionDescription:
+        "The RevoSpray system is designed to control application directly toward the crop canopy. The R200 uses four flexible impeller pumps and four centrifugal JetSprayers, allowing spraying to be configured according to crop and operational requirements.",
+
+      precisionFeatures: [
+        "Smart 240 L spraying tank",
+        "Four flexible impeller pumps with up to 16 L/min combined flow",
+        "Centrifugal atomization with adjustable 60–200 μm droplet size",
+        "JetSprayers with directed airflow to support canopy penetration"
+      ],
+
+      // Deployment Section
+      effortlessDeployment: "NAVIGATION & AUTOMATION",
+      continuousScalable: "Smart and",
+      continuousScalableHighlight: "Repeatable Paths",
+
+      deploymentDescription:
+        "The XAG R200 can turn an initial manual pass into a route that can be repeated autonomously. The system combines RTK, computer vision, mapping and intelligent path control.",
+
+      deploymentFeatures: [
+        {
+          icon: <Map className="text-orange-400" size={20} />,
+          title: "RealTerra",
+          description:
+            "Creates field maps using images captured during the first pass."
+        },
+        {
+          icon: <Navigation className="text-orange-400" size={20} />,
+          title: "Path Tracking",
+          description:
+            "Detects and corrects route deviations while the vehicle is moving."
+        },
+        {
+          icon: <Cpu className="text-orange-400" size={20} />,
+          title: "Repeat Mode",
+          description:
+            "Records routes for later autonomous repetition."
+        }
+      ],
+
+      // Smart Management Section
+      smartManagement: "EQUIPMENT CONTROL",
+      oneTapControl: "Remote",
+      oneTapControlHighlight: "Operation",
+
+      managementDescription:
+        "The SRC 5 controller provides the operator with a dedicated interface to monitor and control the XAG R200 during field operations.",
+
+      managementFeatures: [
+        {
+          icon: <Smartphone className="text-purple-600" size={28} />,
+          title: "SRC 5 Controller",
+          description:
+            "Controller equipped with a 7-inch touchscreen for equipment control."
+        },
+        {
+          icon: <Eye className="text-purple-600" size={28} />,
+          title: "FPV Camera",
+          description:
+            "Up to 150° horizontal field of view for real-time vehicle monitoring."
+        },
+        {
+          icon: <GaugeIcon className="text-purple-600" size={28} />,
+          title: "Cruise Mode",
+          description:
+            "Travel speed control between 0.1 and 1.5 m/s."
+        },
+        {
+          icon: <Shield className="text-purple-600" size={28} />,
+          title: "Safety Assistance",
+          description:
+            "Pedestrian and obstacle detection system supporting autonomous operation."
+        }
+      ],
+
+      // Technical Capabilities Section
+      provenROI: "R200 CAPABILITIES",
+      aiDriven: "Built for",
+      aiDrivenHighlight: "Agricultural Operations",
+
+      roiDescription:
+        "A compact electric platform designed to move between crop rows and perform agricultural operations in a controlled and autonomous way.",
+
+      roiStats: [
+        {
+          value: "240 L",
+          label: "Tank Capacity",
+          icon: <Droplets className="text-yellow-400" size={24} />,
+          description:
+            "RevoSpray tank with intelligent liquid-level monitoring."
+        },
+        {
+          value: "16 L/min",
+          label: "Maximum Flow",
+          icon: <Zap className="text-green-400" size={24} />,
+          description:
+            "Maximum combined flow from the four spraying pumps."
+        },
+        {
+          value: "6x6",
+          label: "Independent Drive",
+          icon: <Navigation className="text-red-400" size={24} />,
+          description:
+            "Six independently driven wheels for agricultural terrain."
+        }
+      ],
+
+      // CTA Section
+      transformOrchard: "Automate Your Orchard Operations",
+
+      ctaDescription:
+        "The XAG R200 combines spraying, autonomous navigation, mapping and 6x6 traction in a single agricultural platform. Discover the vehicle and explore how it can be integrated into your operations.",
+
+      watchDemo: "Watch Demo",
+
+      ctaSubtitle:
+        "Schedule a demonstration • See the vehicle in operation • FieldAirTech technical support",
+
+      // Floating Button
+      technicalSpecifications: "Technical Specifications",
+
+      // Modal
+      close: "Close",
+
+      // Alt texts
+      altHero: "XAG R200 in operation",
+      altPrecisionSpray: "XAG R200 RevoSpray system",
+      altDeployment: "XAG R200 navigation and operation planning system",
+      altAppInterface: "XAG R200 control interface"
     }
-  };
+
+  }), [language]);
 
   const p = pageTexts[language];
 
-  useEffect(() => {
-    // Mock data in both languages
-    const noticiaData = language === 'pt' ? {
-      titulo: "Campo Inteligente: a transformação tecnológica que está a redefinir o futuro agrícola",
-      data: "2025-11-15",
-      autor: "FieldAirTech",
-      tags: ["Agricultura 4.0", "Digitalização", "Eficiência", "Portugal", "Tecnologia"],
-      resumo: "A digitalização agrícola está a redefinir processos, reduzir custos em até 40% e aumentar a eficiência nas explorações agrícolas portuguesas.",
-      conteudo: `
-        <div class="space-y-8">
-          <div class="grid grid-cols-2 gap-4 md:gap-6 mb-8">
-            <div class="col-span-2 md:col-span-1">
-              <img 
-                src="https://i.imgur.com/rM5od2U.jpeg" 
-                alt="Drone agrícola em operação" 
-                class="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg"
-              />
-              <p class="text-gray-500 text-sm mt-2 text-center">Drones de alta precisão em ação</p>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <img 
-                src="https://i.imgur.com/OzYMit5.png" 
-                alt="Agricultura de precisão" 
-                class="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg"
-              />
-              <p class="text-gray-500 text-sm mt-2 text-center">Sensores IoT no campo</p>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <img 
-                src="https://i.imgur.com/6DqHpfS.jpeg" 
-                alt="Sistema de irrigação inteligente" 
-                class="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg"
-              />
-              <p class="text-gray-500 text-sm mt-2 text-center">Irrigação inteligente</p>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <img 
-                src="https://i.imgur.com/HhxmJRL.png"  
-                alt="Monitorização em tempo real" 
-                class="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg"
-              />
-              <p class="text-gray-500 text-sm mt-2 text-center">Monitorização em tempo real</p>
-            </div>
-          </div>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            A agricultura vive atualmente um dos períodos mais disruptivos da sua evolução. 
-            A rápida progressão da automação agrícola está a transformar profundamente o 
-            funcionamento das explorações rurais, dando origem a um novo modelo produtivo 
-            baseado em precisão, eficiência operacional e análise avançada de dados em tempo real.
-          </p>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            As principais empresas tecnológicas e do setor agroindustrial têm intensificado 
-            o investimento em soluções inteligentes, que já começam a alterar de forma 
-            significativa o panorama agrícola português.
-          </p>
-
-          <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg my-8">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Tecnologias que estão a transformar a agricultura:</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                <span><strong>Drones de alta precisão</strong>, capazes de mapear culturas, analisar área de produção e aplicar insumos de forma seletiva</span>
-              </li>
-              <li class="flex items-start">
-                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                <span><strong>Sensores IoT</strong>, que monitorizam em tempo real a humidade, temperatura, qualidade do solo e desenvolvimento das plantas</span>
-              </li>
-              <li class="flex items-start">
-                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                <span><strong>Sistemas de rega autónomos</strong>, ajustando automaticamente o consumo de água de acordo com as necessidades reais de cada cultura</span>
-              </li>
-              <li class="flex items-start">
-                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                <span><strong>Plataformas avançadas de gestão agrícola</strong>, capazes de processar grandes volumes de dados e gerar recomendações técnicas de alta precisão</span>
-              </li>
-            </ul>
-          </div>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            Estas soluções representam um salto tecnológico que promete redefinir os 
-            padrões de eficiência, reduzir desperdícios em até <strong>40%</strong> e promover uma agricultura mais 
-            sustentável, marcando uma mudança estrutural no futuro do setor agrícola português.
-          </p>
-
-          <blockquote class="bg-gray-50 border-l-4 border-green-600 p-8 rounded-r-xl my-10">
-            <p class="text-xl italic text-gray-800 mb-4">
-              "Estamos a assistir ao nascimento de uma nova agricultura, mais eficiente e com impacto ambiental reduzido. 
-              O futuro do campo será digital e Portugal está na linha da frente desta transformação."
-            </p>
-            <div class="flex items-center">
-              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                <div class="text-green-600 font-bold">CM</div>
-              </div>
-              <div>
-                <div class="font-bold text-gray-900">Dr. Carlos Mendes</div>
-                <div class="text-gray-600 text-sm">Especialista em Agricultura Sustentável</div>
-              </div>
-            </div>
-          </blockquote>
-
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Impacto na Agricultura Portuguesa</h2>
-          
-          <p class="text-lg text-gray-700 leading-relaxed">
-            Em Portugal, agricultores das regiões do Alentejo, Ribatejo e Douro já reportam aumentos significativos 
-            na produtividade após a adoção destas tecnologias. A redução no consumo de água chega aos 35% em algumas 
-            culturas, enquanto o uso otimizado de fertilizantes e pesticidas diminui em média 25%.
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
-            <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
-              <div class="text-3xl font-bold text-green-600 mb-2">35%</div>
-              <div class="text-gray-700 font-medium">Redução no consumo de água</div>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
-              <div class="text-3xl font-bold text-green-600 mb-2">25%</div>
-              <div class="text-gray-700 font-medium">Menos insumos químicos</div>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
-              <div class="text-3xl font-bold text-green-600 mb-2">40%</div>
-              <div class="text-gray-700 font-medium">Aumento na eficiência</div>
-            </div>
-          </div>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            A Field AirTech tem desempenhado um papel crucial nesta transformação, fornecendo tecnologia de ponta 
-            e formação especializada a centenas de agricultores portugueses. Através das soluções XAG e LJTech, 
-            estamos a contribuir para uma agricultura mais inteligente, produtiva e sustentável.
-          </p>
-        </div>
-      `,
-    } : {
-      titulo: "Smart Field: the technological transformation redefining the agricultural future",
-      data: "2025-11-15",
-      autor: "FieldAirTech",
-      tags: ["Agriculture 4.0", "Digitalization", "Efficiency", "Portugal", "Technology"],
-      resumo: "Agricultural digitization is redefining processes, reducing costs by up to 40% and increasing efficiency on Portuguese farms.",
-      conteudo: `
-        <div class="space-y-8">
-          <div class="grid grid-cols-2 gap-4 md:gap-6 mb-8">
-            <div class="col-span-2 md:col-span-1">
-              <img 
-                src="https://i.imgur.com/rM5od2U.jpeg" 
-                alt="Agricultural drone in operation" 
-                class="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg"
-              />
-              <p class="text-gray-500 text-sm mt-2 text-center">High-precision drones in action</p>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <img 
-                src="https://i.imgur.com/OzYMit5.png" 
-                alt="Precision agriculture" 
-                class="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg"
-              />
-              <p class="text-gray-500 text-sm mt-2 text-center">IoT sensors in the field</p>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <img 
-                src="https://i.imgur.com/6DqHpfS.jpeg" 
-                alt="Smart irrigation system" 
-                class="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg"
-              />
-              <p class="text-gray-500 text-sm mt-2 text-center">Smart irrigation</p>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <img 
-                src="https://i.imgur.com/HhxmJRL.png"  
-                alt="Real-time monitoring" 
-                class="w-full h-64 md:h-72 object-cover rounded-xl shadow-lg"
-              />
-              <p class="text-gray-500 text-sm mt-2 text-center">Real-time monitoring</p>
-            </div>
-          </div>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            Agriculture is currently experiencing one of the most disruptive periods in its evolution. 
-            The rapid progression of agricultural automation is profoundly transforming the 
-            functioning of rural farms, giving rise to a new production model 
-            based on precision, operational efficiency and real-time advanced data analysis.
-          </p>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            Major technology companies and the agribusiness sector have intensified 
-            investment in smart solutions, which are already beginning to significantly 
-            change the Portuguese agricultural landscape.
-          </p>
-
-          <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg my-8">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Technologies transforming agriculture:</h3>
-            <ul class="space-y-3">
-              <li class="flex items-start">
-                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                <span><strong>High-precision drones</strong>, capable of mapping crops, analyzing production areas and applying inputs selectively</span>
-              </li>
-              <li class="flex items-start">
-                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                <span><strong>IoT sensors</strong>, which monitor in real time humidity, temperature, soil quality and plant development</span>
-              </li>
-              <li class="flex items-start">
-                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                <span><strong>Autonomous irrigation systems</strong>, automatically adjusting water consumption according to the real needs of each crop</span>
-              </li>
-              <li class="flex items-start">
-                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                <span><strong>Advanced agricultural management platforms</strong>, capable of processing large volumes of data and generating high-precision technical recommendations</span>
-              </li>
-            </ul>
-          </div>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            These solutions represent a technological leap that promises to redefine 
-            efficiency standards, reduce waste by up to <strong>40%</strong> and promote more 
-            sustainable agriculture, marking a structural change in the future of the Portuguese agricultural sector.
-          </p>
-
-          <blockquote class="bg-gray-50 border-l-4 border-green-600 p-8 rounded-r-xl my-10">
-            <p class="text-xl italic text-gray-800 mb-4">
-              "We are witnessing the birth of a new agriculture, more efficient and with reduced environmental impact. 
-              The future of the field will be digital and Portugal is at the forefront of this transformation."
-            </p>
-            <div class="flex items-center">
-              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                <div class="text-green-600 font-bold">CM</div>
-              </div>
-              <div>
-                <div class="font-bold text-gray-900">Dr. Carlos Mendes</div>
-                <div class="text-gray-600 text-sm">Sustainable Agriculture Specialist</div>
-              </div>
-            </div>
-          </blockquote>
-
-          <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Impact on Portuguese Agriculture</h2>
-          
-          <p class="text-lg text-gray-700 leading-relaxed">
-            In Portugal, farmers from the Alentejo, Ribatejo and Douro regions already report significant increases 
-            in productivity after adopting these technologies. Water consumption reduction reaches 35% in some 
-            crops, while optimized use of fertilizers and pesticides decreases by an average of 25%.
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
-            <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
-              <div class="text-3xl font-bold text-green-600 mb-2">35%</div>
-              <div class="text-gray-700 font-medium">Water consumption reduction</div>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
-              <div class="text-3xl font-bold text-green-600 mb-2">25%</div>
-              <div class="text-gray-700 font-medium">Less chemical inputs</div>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
-              <div class="text-3xl font-bold text-green-600 mb-2">40%</div>
-              <div class="text-gray-700 font-medium">Efficiency increase</div>
-            </div>
-          </div>
-
-          <p class="text-lg text-gray-700 leading-relaxed">
-            Field AirTech has played a crucial role in this transformation, providing cutting-edge technology 
-            and specialized training to hundreds of Portuguese farmers. Through XAG and LJTech solutions, 
-            we are contributing to a smarter, more productive and sustainable agriculture.
-          </p>
-        </div>
-      `,
-    };
-    
-    setNoticia(noticiaData);
-  }, [language]);
-
-  if (!noticia) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-600"></div>
-      </div>
-    );
-  }
-
-  const formatDate = (dateString: string) => {
-    const options = language === 'pt' ? {
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-    } : {
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-    };
-
-    const date = new Date(dateString);
-    const formatted = date.toLocaleDateString(language === 'pt' ? 'pt-PT' : 'en-US', options);
-
-    if (language === 'pt') {
-      return formatted.replace(/ de ([a-z])/, (match, letter) => {
-        return " de " + letter.toUpperCase();
-      });
-    }
-
-    return formatted;
-  };
-
-  // Related articles content based on language
-  const relatedArticles = language === 'pt' ? [
-    {
-      label: p.newLaunch,
-      title: "XAG revela o novo drone P150 Max na Agritechnica 2025",
-      description: "A XAG apresentou o P150 Max e o rover R Series, reforçando a aposta na automação agrícola inteligente.",
-      color: "green",
-      link: "/noticia-xag",
-    },
-    {
-      label: p.practicalGuide,
-      title: "Como escolher o drone agrícola ideal para a sua exploração",
-      description: "Análise completa das características, custos e benefícios dos principais modelos disponíveis no mercado.",
-      color: "blue",
-      comingSoon: true,
-    }
-  ] : [
-    {
-      label: p.newLaunch,
-      title: "XAG unveils the new P150 Max drone at Agritechnica 2025",
-      description: "XAG presented the P150 Max and the R Series rover, reinforcing its commitment to intelligent agricultural automation.",
-      color: "green",
-      link: "/news-xag",
-    },
-    {
-      label: p.practicalGuide,
-      title: "How to choose the ideal agricultural drone for your farm",
-      description: "Complete analysis of features, costs and benefits of the main models available on the market.",
-      color: "blue",
-      comingSoon: true,
-    }
-  ];
-
   return (
-    <div className="pt-60 min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Back Button */}
-        <div className="mb-8">
-          <Link 
-            to={language === 'pt' ? "/noticias" : "/news"}
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-medium"
-          >
-            <ArrowLeft className="mr-2" size={20} />
-            {p.backButton}
-          </Link>
-        </div>
+    <div className="pt-16 bg-white text-gray-900">
 
-        {/* News Header */}
-        <div className="mb-10">
-          <div className="flex flex-wrap items-center gap-4 text-gray-500 text-sm mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar size={16} />
-              <span>{formatDate(noticia.data)}</span>
-            </div>
-          </div>
+      <style>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            {noticia.titulo}
-          </h1>
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-          <p className="text-xl text-gray-600 mb-8">
-            {noticia.resumo}
-          </p>
+        .animate-fade-in {
+          animation: fadeIn 0.8s ease-out;
+        }
+      `}</style>
 
-          {/* Author and Actions */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-6 border-t border-gray-200">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center">
-                <User className="text-green-600" size={24} />
-              </div>
-              <div>
-                <div className="font-bold text-gray-900">{noticia.autor}</div>
-                <div className="text-gray-600">{noticia.cargo}</div>
-              </div>
-            </div>
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
 
-            <div className="flex items-center gap-4">
-              <button className="flex items-center gap-2 text-gray-600 hover:text-green-600">
-                <Bookmark size={20} />
-                <span className="hidden sm:inline">{p.saveButton}</span>
-              </button>
-              <button className="flex items-center gap-2 text-gray-600 hover:text-green-600">
-                <Share2 size={20} />
-                <span className="hidden sm:inline">{p.shareButton}</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Tags */}
-        <div className="mb-10">
-          <div className="flex items-center gap-2 mb-3">
-            <Tag size={18} className="text-gray-500" />
-            <span className="text-gray-700 font-medium">{p.tagsLabel}</span>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {noticia.tags.map((tag: string, index: number) => (
-              <span
-                key={index}
-                className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-100 hover:text-green-700 transition-colors cursor-pointer"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* News Content */}
-        <article className="prose prose-lg max-w-none">
-          <div 
-            className="text-gray-700 leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: noticia.conteudo }}
-          />
-        </article>
-
-        {/* Newsletter after article */}
-        <div className="mt-16 bg-gradient-to-r from-green-600 to-green-800 rounded-2xl p-10 text-white">
-          <h3 className="text-2xl font-bold mb-4">{p.newsletterTitle}</h3>
-          <p className="text-green-100 mb-8">
-            {p.newsletterDescription}
-          </p>
-          
-          <form className="max-w-md">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder={p.emailPlaceholder}
-                className="flex-grow px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
+            <Link
+              to="/produtos"
+              className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
+            >
+              <ChevronRight
+                className="rotate-180"
+                size={20}
               />
-              <button
-                type="submit"
-                className="bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap"
-              >
-                {p.subscribeButton}
-              </button>
-            </div>
-            <p className="text-green-200 text-sm mt-3">
-              {p.privacyNote}
-            </p>
-          </form>
-        </div>
 
-        {/* Reading Suggestions */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">{p.relatedArticles}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {relatedArticles.map((article, index) => (
-              article.link ? (
-                <Link 
-                  key={index}
-                  to={article.link} 
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow group"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-3 h-3 bg-${article.color}-500 rounded-full`}></div>
-                    <span className="text-sm font-medium text-gray-500">{article.label}</span>
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
-                    {article.title}
-                  </h4>
-                  <p className="text-gray-600">
-                    {article.description}
-                  </p>
-                </Link>
-              ) : (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-3 h-3 bg-${article.color}-500 rounded-full`}></div>
-                    <span className="text-sm font-medium text-gray-500">{article.label}</span>
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">
-                    {article.title}
-                  </h4>
-                  <p className="text-gray-600">
-                    {article.description}
-                  </p>
-                  {article.comingSoon && (
-                    <div className="mt-4 text-green-600 font-medium">{p.comingSoon}</div>
-                  )}
-                </div>
-              )
-            ))}
+              <span className="text-sm font-medium">
+                {p.backToProducts}
+              </span>
+            </Link>
+
+            <button
+              onClick={() => setIsVideoOpen(true)}
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-600 to-cyan-600 text-white rounded-lg hover:from-red-700 hover:to-cyan-700 transition-colors font-medium"
+            >
+              <Play size={16} />
+
+              <span className="text-sm font-medium">
+                {p.watchVideo}
+              </span>
+            </button>
+
           </div>
         </div>
+      </nav>
+
+      {/* 1. Hero Section */}
+      <section className="pt-60 pb-20 bg-gray-50 relative overflow-hidden">
+
+        <div className="absolute -top-3 left-0 right-0 h-6 bg-gray-50 z-10"></div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-20">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* TEXTO */}
+            <div className="space-y-8">
+
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-full text-sm font-medium">
+                {p.autoSprayingTech}
+              </div>
+
+              <h1 className="text-5xl md:text-6xl font-black leading-tight">
+                <span className="text-4xl md:text-5xl font-bold text-red-500">
+                  {p.model}
+                </span>
+              </h1>
+
+              <p className="text-xl text-gray-600 leading-relaxed">
+                {p.heroDescription}
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-2">
+
+                <Link
+                  to="/contactos"
+                  className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-red-400 hover:text-red-700 transition-colors font-semibold text-lg"
+                >
+                  {p.contactSales}
+                </Link>
+
+                <Link
+                  to="/ficha-tecnica/R200"
+                  className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-red-400 hover:text-red-700 transition-colors font-semibold text-lg"
+                >
+                  {p.technicalSpecs}
+                </Link>
+
+              </div>
+
+            </div>
+
+            {/* FOTO */}
+            <div className="relative">
+
+              <img
+                src="https://i.imgur.com/vHxdrIb.png"
+                alt={p.altHero}
+                className="relative w-full h-auto rounded-2xl shadow-2xl"
+              />
+
+            </div>
+
+          </div>
+
+          {/* Features Icons */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-12 border-t border-gray-200">
+
+            {p.features.map((feature, idx) => (
+              <div
+                key={idx}
+                className="text-center group"
+              >
+
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow mb-4">
+                  {feature.icon}
+                </div>
+
+                <h3 className="font-bold text-gray-900 text-lg mb-2">
+                  {feature.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm">
+                  {feature.description}
+                </p>
+
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+
+        <div className="absolute -bottom-3 left-0 right-0 h-6 bg-gray-50 z-10"></div>
+
+      </section>
+
+      {/* 1.5. Video Section */}
+      <section className="py-20 bg-white">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="text-center mb-12">
+          </div>
+
+          <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
+
+            <div className="absolute inset-0 overflow-hidden rounded-xl">
+
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/2r66K-aK_BE?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=2r66K-aK_BE&showinfo=0&iv_load_policy=3&disablekb=1&fs=0&playsinline=1"
+                className="w-full h-full"
+                title="XAG R200 Autonomous Agricultural Vehicle"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen={false}
+                loading="lazy"
+                frameBorder="0"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* 2. Precision Spraying Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+
+        <div className="absolute -top-3 left-0 right-0 h-6 bg-white z-10"></div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-20">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+
+              <div className="space-y-6">
+
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-sm font-medium">
+                  {p.greenRevolution}
+                </div>
+
+                <h2 className="text-4xl font-bold text-gray-900">
+                  {p.precisionSpraying}{' '}
+                  <span className="text-green-600">
+                    {p.precision}
+                  </span>
+                </h2>
+
+                <p className="text-lg text-gray-600">
+                  {p.precisionDescription}
+                </p>
+
+                <div className="space-y-4">
+
+                  {p.precisionFeatures.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-start gap-3"
+                    >
+
+                      <Check
+                        className="text-green-500 mt-1 flex-shrink-0"
+                        size={20}
+                      />
+
+                      <span className="text-gray-700">
+                        {item}
+                      </span>
+
+                    </div>
+                  ))}
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div className="relative">
+
+              <div className="absolute -inset-4 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl blur-3xl"></div>
+
+              <img
+                src="https://i.imgur.com/ZINKkfN.jpeg"
+                alt={p.altPrecisionSpray}
+                className="relative w-full h-auto rounded-2xl shadow-xl"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="absolute -bottom-3 left-0 right-0 h-6 bg-white z-10"></div>
+
+      </section>
+
+      {/* 3. Navigation & Automation Section */}
+      <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
+
+        <div className="absolute -top-3 left-0 right-0 h-6 bg-white z-10"></div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-20">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* FOTO */}
+            <div className="relative">
+
+              <div className="absolute -inset-4 bg-gradient-to-r from-red-600/20 to-orange-500/20 rounded-3xl blur-3xl"></div>
+
+              <img
+                src="https://i.imgur.com/mRh4KrR.jpeg"
+                alt={p.altDeployment}
+                className="relative w-full h-auto rounded-2xl shadow-xl"
+              />
+
+            </div>
+
+            {/* TEXTO */}
+            <div className="space-y-6">
+
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-600 to-orange-500 text-white rounded-full text-sm font-medium">
+                {p.effortlessDeployment}
+              </div>
+
+              <h2 className="text-4xl text-white font-bold">
+
+                {p.continuousScalable}{' '}
+
+                <span className="text-red-400">
+                  {p.continuousScalableHighlight}
+                </span>
+
+              </h2>
+
+              <p className="text-lg text-white">
+                {p.deploymentDescription}
+              </p>
+
+              <div className="space-y-4 text-white">
+
+                {p.deploymentFeatures.map((feature, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-3"
+                  >
+
+                    {feature.icon}
+
+                    <div>
+
+                      <h4 className="font-semibold text-white">
+                        {feature.title}
+                      </h4>
+
+                      <p className="text-gray-400 text-sm">
+                        {feature.description}
+                      </p>
+
+                    </div>
+
+                  </div>
+                ))}
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="absolute -bottom-3 left-0 right-0 h-6 bg-gray-900 z-10"></div>
+
+      </section>
+
+      {/* 4. Smart Management Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+
+        <div className="absolute -top-3 left-0 right-0 h-6 bg-white z-10"></div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-20">
+
+          <div className="text-center mb-16">
+
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-medium mb-4">
+              {p.smartManagement}
+            </div>
+
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+
+              {p.oneTapControl}{' '}
+
+              <span className="text-purple-600">
+                {p.oneTapControlHighlight}
+              </span>
+
+            </h2>
+
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              {p.managementDescription}
+            </p>
+
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            {p.managementFeatures.map((feature, idx) => (
+
+              <div
+                key={idx}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+              >
+
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-purple-50 rounded-xl mb-6">
+                  {feature.icon}
+                </div>
+
+                <h3 className="font-bold text-gray-900 text-xl mb-3">
+                  {feature.title}
+                </h3>
+
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
+
+              </div>
+
+            ))}
+
+          </div>
+
+          <div className="mt-16 text-center">
+
+            <img
+              src="https://i.imgur.com/5CwNyOG.png"
+              alt={p.altAppInterface}
+              className="w-full max-w-4xl mx-auto rounded-2xl shadow-xl"
+            />
+
+          </div>
+
+        </div>
+
+        <div className="absolute -bottom-3 left-0 right-0 h-6 bg-white z-10"></div>
+
+      </section>
+
+      {/* 5. Technical Capabilities Section */}
+      <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
+
+        <div className="max-w-7xl mx-auto px-6 relative z-20">
+
+          <div className="text-center mb-16">
+
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-full text-sm font-medium mb-4">
+              {p.provenROI}
+            </div>
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+
+              {p.aiDriven}{' '}
+
+              <span className="text-red-400">
+                {p.aiDrivenHighlight}
+              </span>
+
+            </h2>
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {p.roiDescription}
+            </p>
+
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+
+            {p.roiStats.map((stat, idx) => (
+
+              <div
+                key={idx}
+                className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20"
+              >
+
+                <div className="flex items-center justify-between mb-4">
+
+                  <div className="text-5xl font-bold">
+                    {stat.value}
+                  </div>
+
+                  <div className="p-3 bg-white/10 rounded-xl">
+                    {stat.icon}
+                  </div>
+
+                </div>
+
+                <h3 className="font-bold text-xl text-red-400 mb-2">
+                  {stat.label}
+                </h3>
+
+                <p className="text-gray-300">
+                  {stat.description}
+                </p>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* 6. CTA Section */}
+      <section className="py-24 bg-red-700 text-white relative overflow-hidden">
+
+        <div className="max-w-5xl mx-auto px-6 text-center relative z-20">
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            {p.transformOrchard}
+          </h2>
+
+          <p className="text-xl text-red-100 mb-10 max-w-3xl mx-auto">
+            {p.ctaDescription}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+
+            <Link
+              to="/contactos"
+              className="group px-10 py-5 bg-white text-red-900 rounded-xl hover:bg-red-50 transition-all duration-300 font-bold text-lg shadow-2xl hover:shadow-3xl flex items-center gap-3 min-w-[240px] justify-center"
+            >
+
+              {p.contactSales}
+
+              <ArrowRight
+                className="group-hover:translate-x-1 transition-transform"
+                size={20}
+              />
+
+            </Link>
+
+            <button
+              onClick={() => setIsVideoOpen(true)}
+              className="px-10 py-5 bg-transparent border-2 border-white/30 text-white rounded-xl hover:bg-white/10 transition-all duration-300 font-bold text-lg flex items-center gap-3 min-w-[240px] justify-center"
+            >
+
+              <Play size={20} />
+
+              {p.watchDemo}
+
+            </button>
+
+          </div>
+
+          <p className="mt-8 text-red-200 text-sm">
+            {p.ctaSubtitle}
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* Floating Button */}
+      <div className="fixed bottom-8 right-8 z-40">
+
+        <Link
+          to="/ficha-tecnica/R200"
+          className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-red-600 to-cyan-600 text-white rounded-full shadow-2xl hover:shadow-3xl font-semibold hover:from-red-700 hover:to-cyan-700 transition-all duration-300"
+        >
+
+          <FileText size={22} />
+
+          <span>
+            {p.technicalSpecifications}
+          </span>
+
+          <ArrowRight
+            className="group-hover:translate-x-1 transition-transform"
+            size={18}
+          />
+
+        </Link>
+
       </div>
+
+      {/* Video Modal */}
+      {isVideoOpen && (
+
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 animate-fade-in">
+
+          <div className="relative w-full max-w-6xl">
+
+            <div className="aspect-video bg-black rounded-2xl overflow-hidden">
+
+              <iframe
+                src="https://www.youtube.com/embed/2r66K-aK_BE?autoplay=1&controls=1&modestbranding=1&rel=0"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title={`${p.model} Demonstration`}
+              />
+
+            </div>
+
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute -top-16 right-0 text-white hover:text-gray-300 transition-colors flex items-center gap-2"
+            >
+
+              <span className="text-sm">
+                {p.close}
+              </span>
+
+              <X size={24} />
+
+            </button>
+
+          </div>
+
+        </div>
+
+      )}
+
     </div>
+  );
+}
+
+/*
+ * Pequeno componente auxiliar para manter
+ * o ícone de velocidade/controlo isolado.
+ */
+function GaugeIcon({
+  className,
+  size
+}: {
+  className?: string;
+  size?: number;
+}) {
+  return (
+    <svg
+      width={size || 24}
+      height={size || 24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M12 14l4-4" />
+      <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+      <path d="M8 18h8" />
+      <path d="M12 18v2" />
+    </svg>
   );
 }
